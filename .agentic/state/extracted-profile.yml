@@ -44,5 +44,22 @@ extracted_profile:
     story_points: null
     title: Create custom Lead intake form with Indian mobile validation
     type: story
+  - acceptance_criteria: []
+    assignee: null
+    derived: false
+    description: ''
+    epic_id: null
+    id: US-02
+    labels: []
+    manually_edited: true
+    priority: medium
+    reporter: null
+    source_doc: null
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: New user story — click to edit
+    type: story
 schema_version: 1
-updated_at: '2026-06-29T09:54:41.097899+00:00'
+updated_at: '2026-06-29T14:17:55.035887+00:00'
