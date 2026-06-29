@@ -60,7 +60,10 @@ extracted_profile:
       the entered Account Name
     assignee: null
     derived: false
-    description: ''
+    description: As an Account Executive, I want to create a new Account record using
+      Salesforce's standard Account creation form so that I can capture a customer
+      organization's core details (name, type, industry, phone, website) and maintain
+      an accurate account base for sales follow-up.
     epic_id: null
     id: US-02
     labels: []
@@ -75,4 +78,4 @@ extracted_profile:
     title: Create Account record with standard fields
     type: story
 schema_version: 1
-updated_at: '2026-06-29T14:19:25.729348+00:00'
+updated_at: '2026-06-29T14:19:38.168933+00:00'

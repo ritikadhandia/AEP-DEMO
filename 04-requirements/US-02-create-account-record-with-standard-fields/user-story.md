@@ -3,6 +3,10 @@
 - **Priority:** medium
 - **Status:** backlog
 
+## Story
+
+> As an Account Executive, I want to create a new Account record using Salesforce's standard Account creation form so that I can capture a customer organization's core details (name, type, industry, phone, website) and maintain an accurate account base for sales follow-up.
+
 ## Acceptance criteria
 
 - Given an Account Executive is on the Accounts list view, when they click the 'New' button, then the standard 'New Account' creation modal opens
@@ -13,4 +17,4 @@
 
 
 ---
-_Auto-generated from in-app state. Source field: `pipeline_artifacts.user_stories[US-02]`. Last updated: 2026-06-29T14:19:25.763338+00:00._
+_Auto-generated from in-app state. Source field: `pipeline_artifacts.user_stories[US-02]`. Last updated: 2026-06-29T14:19:38.209898+00:00._

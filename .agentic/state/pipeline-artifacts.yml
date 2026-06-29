@@ -62,7 +62,10 @@ pipeline_artifacts:
         page showing the entered Account Name
       assignee: null
       derived: false
-      description: ''
+      description: As an Account Executive, I want to create a new Account record
+        using Salesforce's standard Account creation form so that I can capture a
+        customer organization's core details (name, type, industry, phone, website)
+        and maintain an accurate account base for sales follow-up.
       epic_id: null
       id: US-02
       labels: []
@@ -224,4 +227,4 @@ pipeline_artifacts:
     test_suite: Generated test suite — 1 user stories
     total_tests: 1
 schema_version: 1
-updated_at: '2026-06-29T14:19:25.732602+00:00'
+updated_at: '2026-06-29T14:19:38.171707+00:00'
