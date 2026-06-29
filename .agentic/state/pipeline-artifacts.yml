@@ -57,7 +57,9 @@ pipeline_artifacts:
       - Given the Account Name and other standard fields are completed with valid
         values, when the user clicks Save, then a new Account record is created with
         the entered values
-      - New criterion — click to edit
+      - Given the Account record is created successfully, when the save operation
+        completes, then the user is navigated to the newly created Account record
+        page showing the entered Account Name
       assignee: null
       derived: false
       description: ''
@@ -222,4 +224,4 @@ pipeline_artifacts:
     test_suite: Generated test suite — 1 user stories
     total_tests: 1
 schema_version: 1
-updated_at: '2026-06-29T14:19:21.149188+00:00'
+updated_at: '2026-06-29T14:19:25.732602+00:00'

@@ -9,8 +9,8 @@
 - Given the New Account modal is displayed, when the user views the form, then the standard Account fields including Account Name, Phone, Website, Type and Industry are available for entry
 - Given no Account Name has been entered, when the user clicks Save, then a required-field error is shown and the record is not saved
 - Given the Account Name and other standard fields are completed with valid values, when the user clicks Save, then a new Account record is created with the entered values
-- New criterion — click to edit
+- Given the Account record is created successfully, when the save operation completes, then the user is navigated to the newly created Account record page showing the entered Account Name
 
 
 ---
-_Auto-generated from in-app state. Source field: `pipeline_artifacts.user_stories[US-02]`. Last updated: 2026-06-29T14:19:21.187941+00:00._
+_Auto-generated from in-app state. Source field: `pipeline_artifacts.user_stories[US-02]`. Last updated: 2026-06-29T14:19:25.763338+00:00._
