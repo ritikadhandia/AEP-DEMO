@@ -6,8 +6,8 @@
 ## Acceptance criteria
 
 - Given an Account Executive is on the Accounts list view, when they click the 'New' button, then the standard 'New Account' creation modal opens
-- New criterion — click to edit
+- Given the New Account modal is displayed, when the user views the form, then the standard Account fields including Account Name, Phone, Website, Type and Industry are available for entry
 
 
 ---
-_Auto-generated from in-app state. Source field: `pipeline_artifacts.user_stories[US-02]`. Last updated: 2026-06-29T14:18:52.217603+00:00._
+_Auto-generated from in-app state. Source field: `pipeline_artifacts.user_stories[US-02]`. Last updated: 2026-06-29T14:18:58.780067+00:00._
