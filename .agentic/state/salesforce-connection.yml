@@ -1,14 +1,3 @@
-salesforce_connection:
-  access_token: '[REDACTED] Use ''sf org auth show-access-token'' to view'
-  auth_method: sfdx
-  client_id: PlatformCLI
-  connected_at: '2026-06-29T09:23:32.466363+00:00'
-  instance_url: https://orgfarm-5fe94d0562-dev-ed.develop.my.salesforce.com
-  org_alias: DevOrgDynamicQues
-  org_id: 00Dg5000008prorEAA
-  org_type: production
-  sfdx_target: DevOrgDynamicQues
-  status: connected
-  username: dhandia.ritika.3e313b62d5ee@agentforce.com
+salesforce_connection: null
 schema_version: 1
-updated_at: '2026-06-29T09:23:38.853849+00:00'
+updated_at: '2026-06-29T09:35:33.993987+00:00'
