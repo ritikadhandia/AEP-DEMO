@@ -50,6 +50,7 @@ extracted_profile:
     - Given the New Account modal is displayed, when the user views the form, then
       the standard Account fields including Account Name, Phone, Website, Type and
       Industry are available for entry
+    - New criterion — click to edit
     assignee: null
     derived: false
     description: ''
@@ -67,4 +68,4 @@ extracted_profile:
     title: Create Account record with standard fields
     type: story
 schema_version: 1
-updated_at: '2026-06-29T14:18:58.746855+00:00'
+updated_at: '2026-06-29T14:19:02.166612+00:00'
