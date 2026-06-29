@@ -46,6 +46,30 @@ pipeline_artifacts:
       story_points: null
       title: Create custom Lead intake form with Indian mobile validation
       type: story
+  test_executions:
+  - completed_at: '2026-06-29T06:44:45.058886+00:00'
+    defects: []
+    executed_by: Test Execution Agent (Mock Mode)
+    execution_id: EXEC-MOCK-11b288d1
+    org_url: https://mock-org.salesforce.com
+    started_at: '2026-06-29T06:44:45.058854+00:00'
+    summary:
+      failed: 0
+      pass_rate: 100%
+      passed: 1
+      skipped: 0
+      total: 1
+    test_results:
+    - duration_seconds: 21
+      failure_detail: null
+      linked_story: US-01
+      persona: Prospective Tenant
+      screenshot: null
+      status: passed
+      steps_executed: 8
+      steps_passed: 8
+      test_id: TC-001
+      title: Leasing agent returns top-3 matching units and enforces required City
   test_scripts:
     generated_at: '2026-06-29T06:42:25.934839+00:00'
     generated_from: Standalone run — 1 user stories in 1 batch(es)
@@ -170,4 +194,4 @@ pipeline_artifacts:
     test_suite: Generated test suite — 1 user stories
     total_tests: 1
 schema_version: 1
-updated_at: '2026-06-29T06:42:25.954386+00:00'
+updated_at: '2026-06-29T06:44:45.069456+00:00'
