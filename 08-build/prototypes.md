@@ -6,4 +6,4 @@
 
 
 ---
-_Auto-generated from in-app state. Source field: `sandbox_prototypes[]`. Last updated: 2026-06-29T18:34:35.874661+00:00._
+_Auto-generated from in-app state. Source field: `sandbox_prototypes[]`. Last updated: 2026-06-29T20:06:34.234560+00:00._
