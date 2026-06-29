@@ -44,7 +44,8 @@ extracted_profile:
     story_points: null
     title: Create custom Lead intake form with Indian mobile validation
     type: story
-  - acceptance_criteria: []
+  - acceptance_criteria:
+    - New criterion — click to edit
     assignee: null
     derived: false
     description: ''
@@ -62,4 +63,4 @@ extracted_profile:
     title: Create Account record with standard fields
     type: story
 schema_version: 1
-updated_at: '2026-06-29T14:18:20.200308+00:00'
+updated_at: '2026-06-29T14:18:42.102726+00:00'

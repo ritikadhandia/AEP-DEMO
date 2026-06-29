@@ -46,7 +46,8 @@ pipeline_artifacts:
       story_points: null
       title: Create custom Lead intake form with Indian mobile validation
       type: story
-    - acceptance_criteria: []
+    - acceptance_criteria:
+      - New criterion — click to edit
       assignee: null
       derived: false
       description: ''
@@ -211,4 +212,4 @@ pipeline_artifacts:
     test_suite: Generated test suite — 1 user stories
     total_tests: 1
 schema_version: 1
-updated_at: '2026-06-29T14:18:20.203607+00:00'
+updated_at: '2026-06-29T14:18:42.105514+00:00'
