@@ -101,7 +101,7 @@ pipeline_artifacts:
       status: passed
       steps_executed: 8
       steps_passed: 8
-      test_id: TC-001
+      test_id: TC-002
       title: Leasing agent returns top-3 matching units and enforces required City
   - aborted: false
     completed_at: '2026-06-29T18:34:35.836449+00:00'
@@ -120,7 +120,7 @@ pipeline_artifacts:
       severity: Medium
       status: open
       story_title: ''
-      test_id: TC-001
+      test_id: TC-002
       title: Custom Lead intake form with Indian mobile validation
     executed_by: 'Test Execution Agent — '
     execution_id: EXEC-ea79642a
@@ -253,7 +253,7 @@ pipeline_artifacts:
       steps_executed: 12
       steps_passed: 8
       summary: null
-      test_id: TC-001
+      test_id: TC-002
       title: Custom Lead intake form with Indian mobile validation
   - aborted: false
     completed_at: '2026-06-29T20:11:04.085508+00:00'
@@ -274,7 +274,7 @@ pipeline_artifacts:
       severity: Medium
       status: open
       story_title: ''
-      test_id: TC-001
+      test_id: TC-002
       title: Custom Lead intake form with Indian mobile validation
     executed_by: 'Test Execution Agent — '
     execution_id: EXEC-ae52425b
@@ -545,10 +545,10 @@ pipeline_artifacts:
         configured in this org. The form accepts invalid format ''1234567890'' without
         error. Lead record was successfully created but validation requirements were
         not met.'
-      test_id: TC-001
+      test_id: TC-002
       title: Custom Lead intake form with Indian mobile validation
   test_scripts:
-    generated_at: '2026-06-29T06:42:25.934839+00:00'
+    generated_at: '2026-06-29T20:15:17.381736+00:00'
     generated_from: Standalone run — 1 user stories in 1 batch(es)
     test_cases:
     - assertions:
@@ -668,7 +668,144 @@ pipeline_artifacts:
       user_story: As a sales representative, I want to use a streamlined Lead intake
         form with only mandatory fields and Indian mobile validation so that I can
         quickly capture leads without navigating through numerous optional fields.
+    - assertions:
+      - New Account modal opens when clicking the New button from Accounts list view
+      - Standard Account fields (Name, Phone, Website, Type, Industry) are available
+        for entry in the creation form
+      - Required field validation prevents saving when Account Name is empty and displays
+        'Complete this field' message
+      - Account record is successfully created when Account Name and valid field values
+        are provided
+      - User is navigated to the newly created Account record page showing the entered
+        Account Name after successful save
+      - Success toast notification confirms the Account creation with the correct
+        Account name
+      estimated_duration_minutes: 8
+      generated_at: '2026-06-29T20:15:17.382028+00:00'
+      linked_story: US-02
+      pass_criteria: All form fields are accessible, required field validation works
+        correctly for empty Account Name, Account record is created successfully with
+        entered values, success notification appears, and user is navigated to the
+        new Account detail page
+      persona: Account Executive
+      preconditions:
+        app: Sales
+        test_data:
+        - Account Executive has access to Accounts object with Create permission
+        user_profile: Standard User with Account create permissions
+      steps:
+      - action: click
+        detail: Click the 9-dot App Launcher icon in the top-left corner
+        expected: App Launcher menu opens showing available apps and items
+        step: 1
+        target: App Launcher
+      - action: click
+        detail: Click on the Accounts tab in the App Launcher or navigation bar
+        expected: Accounts list view page loads showing existing accounts
+        step: 2
+        target: Accounts
+      - action: click
+        detail: Click the New button on the Accounts list view page
+        expected: The New Account creation modal opens displaying the standard Account
+          form
+        step: 3
+        target: New button (button[name="New"])
+      - action: verify
+        detail: Verify the Account Name field is visible in the form
+        expected: Account Name field is displayed and available for entry
+        step: 4
+        target: Account Name field (input[name="Name"])
+      - action: verify
+        detail: Verify the Phone field is visible in the form
+        expected: Phone field is displayed and available for entry
+        step: 5
+        target: Phone field (input[name="Phone"])
+      - action: verify
+        detail: Verify the Website field is visible in the form
+        expected: Website field is displayed and available for entry
+        step: 6
+        target: Website field (input[name="Website"])
+      - action: verify
+        detail: Verify the Type picklist field is visible in the form
+        expected: Type picklist field is displayed and available for selection
+        step: 7
+        target: Type picklist (button[role="combobox"][aria-label="Type"])
+      - action: verify
+        detail: Verify the Industry picklist field is visible in the form
+        expected: Industry picklist field is displayed and available for selection
+        step: 8
+        target: Industry picklist (button[role="combobox"][aria-label="Industry"])
+      - action: click
+        detail: Click the Save button without entering any data to test required field
+          validation
+        expected: Required field validation appears and the record is not saved
+        step: 9
+        target: Save button (button[name="SaveEdit"])
+      - action: verify
+        detail: Verify that a required field validation message appears for the Account
+          Name field
+        expected: Complete this field
+        step: 10
+        target: Account Name field validation
+      - action: fill
+        data: Acme Corporation
+        detail: Click in the Account Name field and enter 'Acme Corporation'
+        expected: The Account Name field displays 'Acme Corporation'
+        step: 11
+        target: Account Name field (input[name="Name"])
+      - action: fill
+        data: 555-123-4567
+        detail: Click in the Phone field and enter '555-123-4567'
+        expected: The Phone field displays '555-123-4567'
+        step: 12
+        target: Phone field (input[name="Phone"])
+      - action: fill
+        data: www.acmecorp.com
+        detail: Click in the Website field and enter 'www.acmecorp.com'
+        expected: The Website field displays 'www.acmecorp.com'
+        step: 13
+        target: Website field (input[name="Website"])
+      - action: select_picklist
+        detail: Open the Type picklist and select 'Customer - Direct'
+        expected: Type field shows 'Customer - Direct'
+        step: 14
+        target: Type picklist (button[role="combobox"][aria-label="Type"])
+        value: Customer - Direct
+      - action: select_picklist
+        detail: Open the Industry picklist and select 'Technology'
+        expected: Industry field shows 'Technology'
+        step: 15
+        target: Industry picklist (button[role="combobox"][aria-label="Industry"])
+        value: Technology
+      - action: click
+        detail: Click the Save button to create the Account record with all entered
+          values
+        expected: The Account record is saved and a success toast notification appears
+        step: 16
+        target: Save button (button[name="SaveEdit"])
+      - action: verify
+        detail: Verify the success toast message appears confirming the Account was
+          created
+        expected: Account "Acme Corporation" was created.
+        step: 17
+        target: Success toast notification
+      - action: verify
+        detail: Verify navigation to the newly created Account record page showing
+          the Account Name
+        expected: The Account detail page is displayed with 'Acme Corporation' in
+          the page header
+        step: 18
+        target: Account record page header
+      story_snapshot: 2fc00fb3918edc4c
+      surface: internal_lightning
+      test_id: TC-002
+      title: Create Account record with standard fields - Happy Path and Required
+        Field Validation
+      user_story: As an Account Executive, I want to create a new Account record using
+        Salesforce's standard Account creation form so that I can capture a customer
+        organization's core details (name, type, industry, phone, website) and maintain
+        an accurate account base for sales follow-up.
     test_suite: Generated test suite — 1 user stories
-    total_tests: 1
+    total_tests: 2
 schema_version: 1
-updated_at: '2026-06-29T20:11:04.091553+00:00'
+updated_at: '2026-06-29T20:15:17.391091+00:00'
