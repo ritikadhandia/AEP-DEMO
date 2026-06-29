@@ -1,3 +1,14 @@
-salesforce_connection: null
+salesforce_connection:
+  access_token: '[REDACTED] Use ''sf org auth show-access-token'' to view'
+  auth_method: sfdx
+  client_id: 3MVG9SyIv1abnnJr.L4TXrLJTnouq4qbT52uIQvph2u.EWN_HZy0ci7aIjd.4nWqQPLAiGRMktN8lSpd38wNY
+  connected_at: '2026-06-29T09:36:40.902487+00:00'
+  instance_url: https://storm-89c7b1e3690c2c.my.salesforce.com
+  org_alias: rdhandia@salesforce.com.mogaorg
+  org_id: 00DId000000J9itMAC
+  org_type: production
+  sfdx_target: rdhandia@salesforce.com.mogaorg
+  status: connected
+  username: rdhandia@salesforce.com.mogaorg
 schema_version: 1
-updated_at: '2026-06-29T09:36:04.823210+00:00'
+updated_at: '2026-06-29T09:36:40.915960+00:00'
