@@ -1,14 +1,3 @@
-salesforce_connection:
-  access_token: '[REDACTED] Use ''sf org auth show-access-token'' to view'
-  auth_method: sfdx
-  client_id: PlatformCLI
-  connected_at: '2026-06-29T09:51:44.268371+00:00'
-  instance_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.my.salesforce.com
-  org_alias: Cunning-Otter
-  org_id: 00Dg7000008xtFEEAY
-  org_type: production
-  sfdx_target: Cunning-Otter
-  status: connected
-  username: rdhandia@cunning-otter-59k4gi.com
+salesforce_connection: null
 schema_version: 1
-updated_at: '2026-06-29T09:52:42.548737+00:00'
+updated_at: '2026-06-29T09:54:41.113267+00:00'
