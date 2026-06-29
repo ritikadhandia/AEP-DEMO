@@ -255,6 +255,298 @@ pipeline_artifacts:
       summary: null
       test_id: TC-001
       title: Custom Lead intake form with Indian mobile validation
+  - aborted: false
+    completed_at: '2026-06-29T20:11:04.085508+00:00'
+    defects:
+    - created_at: '2026-06-29T20:11:04.085533+00:00'
+      defect_id: DEF-001
+      error: 'Test partially failed: Custom Lead intake form exists with only 4 mandatory
+        fields (missing Lead Source), and Indian mobile validation is not configured
+        in this org. The form accepts invalid format ''1234567890'' without error.
+        Lead record was successfully created but validation requirements were not
+        met.'
+      jira_key: ''
+      jira_pushed_at: ''
+      linked_story: US-001
+      persona: Default
+      resolved_at: ''
+      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-001-failure.png
+      severity: Medium
+      status: open
+      story_title: ''
+      test_id: TC-001
+      title: Custom Lead intake form with Indian mobile validation
+    executed_by: 'Test Execution Agent — '
+    execution_id: EXEC-ae52425b
+    org_url: https://login.salesforce.com
+    started_at: '2026-06-29T20:06:43.767369+00:00'
+    summary:
+      failed: 1
+      pass_rate: 0%
+      passed: 0
+      skipped: 0
+      total: 1
+    test_results:
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 250.2
+      executor: mcp
+      failure_detail: 'Test partially failed: Custom Lead intake form exists with
+        only 4 mandatory fields (missing Lead Source), and Indian mobile validation
+        is not configured in this org. The form accepts invalid format ''1234567890''
+        without error. Lead record was successfully created but validation requirements
+        were not met.'
+      linked_story: US-001
+      persona: Default
+      screenshot: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-001-failure.png
+      skipped: false
+      status: failed
+      step_results:
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to Main Co"
+        elapsed_seconds: 11.0
+        purpose: Click the 9-dot App Launcher icon
+        status: passed
+        step: 1
+        target: e17
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/list\n\
+          page_title: Lightning Experience | Salesforce\nelements:\n  e1: <a> 'Skip\
+          \ to Navigation'\n  e2: <a"
+        elapsed_seconds: 18.5
+        purpose: Click on the Leads tab
+        status: passed
+        step: 2
+        target: e25
+      - action: click_by_selector
+        detail: no visible element matches 'button[name="New"]'. The hint may be wrong
+          for this org — take a fresh snapshot and click the element by its visible
+          label/ref instead.
+        elapsed_seconds: 29.1
+        purpose: Click the New button on Leads list view
+        status: failed
+        step: 3
+        target: ''
+      - action: click
+        detail: 'Clicked successfully
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.eyJ0eXBlIjoic3RhbmRhcmRfX29iamVjdFBhZ2UiLCJhdHRyaWJ1dGVzIjp7Im9iamVjdEFwaU5hbWU'
+        elapsed_seconds: 35.2
+        purpose: Click the New button on Leads list view
+        status: passed
+        step: 4
+        target: e35
+      - action: press_key
+        detail: Pressed 'PageDown' successfully
+        elapsed_seconds: 48.9
+        purpose: Scroll down to see if Lead Source field is below
+        status: passed
+        step: 5
+        target: ''
+      - action: verify_text
+        detail: 'Verified: ''First Name'' is visible on the page'
+        elapsed_seconds: 60.1
+        purpose: First Name
+        status: passed
+        step: 6
+        target: First Name
+      - action: verify_text
+        detail: 'Verified: ''Last Name'' is visible on the page'
+        elapsed_seconds: 64.1
+        purpose: Last Name
+        status: passed
+        step: 7
+        target: Last Name
+      - action: verify_text
+        detail: 'Verified: ''Mobile'' is visible on the page'
+        elapsed_seconds: 70.1
+        purpose: Mobile
+        status: passed
+        step: 8
+        target: Mobile
+      - action: verify_text
+        detail: 'Verified: ''Email'' is visible on the page'
+        elapsed_seconds: 75.1
+        purpose: Email
+        status: passed
+        step: 9
+        target: Email
+      - action: verify_text
+        detail: '''Lead Source'' was not visible on the page after waiting. If this
+          is a final assertion, take a fresh snapshot to re-check or call finish —
+          do NOT click or navigate to hunt for it.'
+        elapsed_seconds: 82.7
+        purpose: Lead Source
+        status: failed
+        step: 10
+        target: Lead Source
+      - action: fill_by_selector
+        detail: 'Typed 6 characters successfully (self-healed: selector ''input[placeholder="First
+          Name"]'' missed; matched the field by its rendered label ''First Name'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightni'
+        elapsed_seconds: 90.4
+        purpose: Fill First Name field with 'Rajesh'
+        status: passed
+        step: 11
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 5 characters successfully (self-healed: selector ''input[placeholder="Last
+          Name"]'' missed; matched the field by its rendered label ''Last Name'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning'
+        elapsed_seconds: 97.0
+        purpose: Fill Last Name field with 'Kumar'
+        status: passed
+        step: 12
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 10 characters successfully (self-healed: selector ''input[name="MobilePhone"]''
+          missed; matched the field by its rendered label ''Mobile'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.'
+        elapsed_seconds: 104.1
+        purpose: Fill Mobile field with invalid format '1234567890'
+        status: passed
+        step: 13
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 24 characters successfully (self-healed: selector ''input[name="Email"]''
+          missed; matched the field by its rendered label ''Email'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lig'
+        elapsed_seconds: 111.0
+        purpose: Fill Email field with 'rajesh.kumar@example.com'
+        status: passed
+        step: 14
+        target: ''
+      - action: click
+        detail: the click did not land — the element likely re-rendered or is not
+          visible yet. Take a FRESH snapshot and click it again by its current ref
+          / visible label. (Element was not visible after timeout — page may not have
+          rendered it in time)
+        elapsed_seconds: 129.1
+        purpose: Click Save button to test validation with invalid mobile format
+        status: failed
+        step: 15
+        target: e43
+      - action: click
+        detail: the click did not land — the element likely re-rendered or is not
+          visible yet. Take a FRESH snapshot and click it again by its current ref
+          / visible label. (Element was not visible after timeout — page may not have
+          rendered it in time)
+        elapsed_seconds: 150.1
+        purpose: Click Save button to test validation with invalid mobile format
+        status: failed
+        step: 16
+        target: e43
+      - action: click_by_selector
+        detail: 'Clicked element matching ''button:has-text("Save")''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/r/Lead/00Qg7000008lSVhEAM/view
+
+          page_title: Rajesh Kumar | Lead | Salesforce
+
+          e'
+        elapsed_seconds: 161.1
+        purpose: Click Save button to test validation
+        status: passed
+        step: 17
+        target: ''
+      - action: click
+        detail: the click did not land — the element likely re-rendered or is not
+          visible yet. Take a FRESH snapshot and click it again by its current ref
+          / visible label. (Element was not visible after timeout — page may not have
+          rendered it in time)
+        elapsed_seconds: 188.5
+        purpose: Click Details tab to view saved field values
+        status: failed
+        step: 18
+        target: e58
+      - action: click_by_selector
+        detail: no visible element matches 'tab:has-text("Details")'. The hint may
+          be wrong for this org — take a fresh snapshot and click the element by its
+          visible label/ref instead.
+        elapsed_seconds: 193.1
+        purpose: Click Details tab to view saved field values
+        status: failed
+        step: 19
+        target: ''
+      - action: click
+        detail: the click did not land — the element likely re-rendered or is not
+          visible yet. Take a FRESH snapshot and click it again by its current ref
+          / visible label. (Element was not visible after timeout — page may not have
+          rendered it in time)
+        elapsed_seconds: 212.1
+        purpose: Click Details tab to view saved field values
+        status: failed
+        step: 20
+        target: e58
+      - action: verify_text
+        detail: 'Verified: ''Rajesh Kumar'' is visible on the page'
+        elapsed_seconds: 219.7
+        purpose: Rajesh Kumar
+        status: passed
+        step: 21
+        target: Rajesh Kumar
+      - action: verify_text
+        detail: 'Verified: ''rajesh.kumar@example.com'' is visible on the page'
+        elapsed_seconds: 225.1
+        purpose: rajesh.kumar@example.com
+        status: passed
+        step: 22
+        target: rajesh.kumar@example.com
+      - action: verify_url
+        detail: 'Verified URL (contains ''/lightning/r/Lead/''): https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/r/Lead/00Qg7000008lSVhEAM/view'
+        elapsed_seconds: 231.1
+        purpose: Verify we are on Lead record page
+        status: passed
+        step: 23
+        target: ''
+      - action: verify_text
+        detail: 'Verified: ''1234567890'' is visible on the page'
+        elapsed_seconds: 239.1
+        purpose: '1234567890'
+        status: passed
+        step: 24
+        target: '1234567890'
+      steps_executed: 24
+      steps_passed: 17
+      summary: 'Test partially failed: Custom Lead intake form exists with only 4
+        mandatory fields (missing Lead Source), and Indian mobile validation is not
+        configured in this org. The form accepts invalid format ''1234567890'' without
+        error. Lead record was successfully created but validation requirements were
+        not met.'
+      test_id: TC-001
+      title: Custom Lead intake form with Indian mobile validation
   test_scripts:
     generated_at: '2026-06-29T06:42:25.934839+00:00'
     generated_from: Standalone run — 1 user stories in 1 batch(es)
@@ -379,4 +671,4 @@ pipeline_artifacts:
     test_suite: Generated test suite — 1 user stories
     total_tests: 1
 schema_version: 1
-updated_at: '2026-06-29T20:06:34.193377+00:00'
+updated_at: '2026-06-29T20:11:04.091553+00:00'
