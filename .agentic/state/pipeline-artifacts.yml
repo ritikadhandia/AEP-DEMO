@@ -46,5 +46,128 @@ pipeline_artifacts:
       story_points: null
       title: Create custom Lead intake form with Indian mobile validation
       type: story
+  test_scripts:
+    generated_at: '2026-06-29T06:42:25.934839+00:00'
+    generated_from: Standalone run — 1 user stories in 1 batch(es)
+    test_cases:
+    - assertions:
+      - Custom Lead intake form opens when New button is clicked instead of standard
+        form
+      - Only First Name, Last Name, Mobile, Email and Lead Source fields are visible
+        and marked as required
+      - Invalid mobile number format prevents form submission with appropriate error
+        message
+      - Valid Indian mobile format (+91 followed by 10 digits) allows successful form
+        submission
+      - New Lead record is created with all entered values
+      - User is automatically redirected to newly created Lead record page after save
+      - Field-level validation prevents submission with invalid data while keeping
+        form open for correction
+      estimated_duration_minutes: 8
+      generated_at: '2026-06-29T06:42:25.935256+00:00'
+      linked_story: US-001
+      pass_criteria: Custom form displays only mandatory fields, validates Indian
+        mobile format correctly, creates Lead record with valid data, and automatically
+        navigates to the new record page
+      persona: Sales Representative
+      preconditions:
+        app: Sales
+        test_data:
+        - Custom Lead intake form component is deployed and configured to override
+          standard New Lead action
+        - Indian mobile validation rule is active
+        user_profile: Sales User
+      steps:
+      - action: click
+        detail: Click the 9-dot App Launcher icon in the top-left corner
+        expected: App Launcher menu opens
+        step: 1
+        target: App Launcher
+      - action: click
+        detail: Click on the Leads tab in the App Launcher menu
+        expected: Leads list view page opens
+        step: 2
+        target: Leads
+      - action: click
+        detail: Click the New button on the Leads list view
+        expected: Custom Lead intake form opens instead of standard Salesforce form,
+          showing only First Name, Last Name, Mobile, Email and Lead Source fields
+        step: 3
+        target: New button (button[name="New"])
+      - action: verify
+        detail: Verify only the 5 mandatory fields are visible on the form
+        expected: Only First Name, Last Name, Mobile, Email and Lead Source fields
+          are visible, all marked as required
+        step: 4
+        target: Form fields visibility
+      - action: fill
+        data: Rajesh
+        detail: Click in the First Name field and enter 'Rajesh'
+        expected: First Name field displays 'Rajesh'
+        step: 5
+        target: First Name (input[placeholder="First Name"])
+      - action: fill
+        data: Kumar
+        detail: Click in the Last Name field and enter 'Kumar'
+        expected: Last Name field displays 'Kumar'
+        step: 6
+        target: Last Name (input[placeholder="Last Name"])
+      - action: fill
+        data: '1234567890'
+        detail: Click in the Mobile field and enter invalid format '1234567890'
+        expected: Mobile field displays '1234567890'
+        step: 7
+        target: Mobile (input[name="MobilePhone"])
+      - action: fill
+        data: rajesh.kumar@example.com
+        detail: Click in the Email field and enter 'rajesh.kumar@example.com'
+        expected: Email field displays 'rajesh.kumar@example.com'
+        step: 8
+        target: Email (input[name="Email"])
+      - action: select_picklist
+        detail: Click the Lead Source picklist and select 'Website'
+        expected: Lead Source shows 'Website'
+        step: 9
+        target: Lead Source (button[role="combobox"][aria-label="Lead Source"])
+        value: Website
+      - action: click
+        detail: Click the Save button to submit the form with invalid mobile format
+        expected: Error message displays for Mobile field indicating invalid Indian
+          format and form remains open
+        step: 10
+        target: Save button
+      - action: fill
+        data: '+919876543210'
+        detail: Clear the Mobile field and enter valid Indian format '+919876543210'
+        expected: Mobile field displays '+919876543210'
+        step: 11
+        target: Mobile (input[name="MobilePhone"])
+      - action: click
+        detail: Click the Save button to submit the form with valid data
+        expected: Form submits successfully and new Lead record is created
+        step: 12
+        target: Save button
+      - action: verify
+        detail: Verify user is automatically navigated to the newly created Lead record
+          page
+        expected: Lead record detail page displays with name 'Rajesh Kumar' in the
+          page header
+        step: 13
+        target: Lead record page
+      - action: verify
+        detail: Verify all entered field values are correctly saved on the Lead record
+        expected: 'Lead record shows First Name: Rajesh, Last Name: Kumar, Mobile:
+          +919876543210, Email: rajesh.kumar@example.com, Lead Source: Website'
+        step: 14
+        target: Lead field values
+      story_snapshot: 93a5f8d3195ec29e
+      surface: internal_lightning
+      test_id: TC-001
+      title: Custom Lead intake form with Indian mobile validation
+      user_story: As a sales representative, I want to use a streamlined Lead intake
+        form with only mandatory fields and Indian mobile validation so that I can
+        quickly capture leads without navigating through numerous optional fields.
+    test_suite: Generated test suite — 1 user stories
+    total_tests: 1
 schema_version: 1
-updated_at: '2026-06-29T06:40:49.108695+00:00'
+updated_at: '2026-06-29T06:42:25.954386+00:00'
