@@ -11,6 +11,12 @@ _Created: 2026-06-29T06:17:35.446926+00:00_
 | Pipeline runs | 0 |
 | Sandbox prototypes | 0 |
 
+## Tab notifications
+
+| Tab | Count |
+| --- | --- |
+| discovery | 1 |
+
 
 ---
-_Auto-generated from in-app state. Source field: `project_name + extracted_profile + tab_badges`. Last updated: 2026-06-29T06:17:37.445488+00:00._
+_Auto-generated from in-app state. Source field: `project_name + extracted_profile + tab_badges`. Last updated: 2026-06-29T06:34:48.313724+00:00._

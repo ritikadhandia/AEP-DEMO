@@ -1,3 +1,48 @@
-extracted_profile: null
+extracted_profile:
+  epics:
+  - color: '#8b5cf6'
+    description: Capture, qualify, route, and convert inbound leads efficiently.
+    id: EP-01
+    name: Lead Management
+    status: in_progress
+  user_stories:
+  - acceptance_criteria:
+    - Given a user clicks the 'New' button on Lead object pages, when the action is
+      triggered, then the custom Lead intake form opens instead of the standard Salesforce
+      form
+    - Given the custom form is displayed, when a user views the form, then only First
+      Name, Last Name, Mobile, Email and Lead Source fields are visible with all marked
+      as required
+    - Given a user enters a mobile number, when the number format is not valid Indian
+      format (+91 followed by 10 digits), then an error message displays preventing
+      form submission
+    - Given all required fields are completed with valid data, when the user clicks
+      Save, then a new Lead record is created in Salesforce with the entered values
+    - Given a Lead record is successfully created, when the save operation completes,
+      then the user is automatically navigated to the newly created Lead record page
+    - Given invalid or incomplete data is entered, when the user attempts to save,
+      then appropriate field-level error messages display and the form remains open
+      for correction
+    assignee: null
+    derived: false
+    description: Currently users must navigate Salesforce's standard Lead creation
+      form with numerous optional fields, slowing down lead capture. This custom form
+      will replace the standard 'New' button behavior to show only the 5 mandatory
+      fields (First Name, Last Name, Mobile, Email, Lead Source) with Indian mobile
+      format validation. Upon successful save, users will be automatically redirected
+      to the newly created Lead record page for immediate follow-up actions.
+    epic_id: EP-01
+    id: US-001
+    labels: []
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: null
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: Create custom Lead intake form with Indian mobile validation
+    type: story
 schema_version: 1
-updated_at: '2026-06-29T06:17:37.442758+00:00'
+updated_at: '2026-06-29T06:34:48.302171+00:00'

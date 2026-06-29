@@ -1,3 +1,4 @@
 schema_version: 1
-tab_badges: {}
-updated_at: '2026-06-29T06:17:37.443846+00:00'
+tab_badges:
+  discovery: 1
+updated_at: '2026-06-29T06:34:48.308345+00:00'
