@@ -14,3 +14,4 @@
 {"id": "33d93d7c", "agent": "Leader Agent", "message": "Connected via sf CLI: rdhandia@salesforce.com.mogaorg (rdhandia@salesforce.com.mogaorg)", "status": "done", "timestamp": "2026-06-29T09:42:14.169699+00:00", "trace_id": null}
 {"id": "c5b4b76e", "agent": "Leader Agent", "message": "Salesforce org disconnected", "status": "done", "timestamp": "2026-06-29T09:44:18.910385+00:00", "trace_id": null}
 {"id": "e3309e7a", "agent": "Leader Agent", "message": "Connected via sf login: Cunning-Otter (rdhandia@cunning-otter-59k4gi.com)", "status": "done", "timestamp": "2026-06-29T09:46:42.343896+00:00", "trace_id": null}
+{"id": "451a7494", "agent": "Sandbox Builder Agent", "message": "Deploy failed: Deploy submit failed (401): [{\"message\":\"INVALID_AUTH_HEADER\",\"errorCode\":\"INVALID_AUTH_HEADER\"}]", "status": "error", "timestamp": "2026-06-29T09:47:31.648604+00:00", "trace_id": null}
