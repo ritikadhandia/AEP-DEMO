@@ -52,7 +52,9 @@ extracted_profile:
       Industry are available for entry
     - Given no Account Name has been entered, when the user clicks Save, then a required-field
       error is shown and the record is not saved
-    - New criterion — click to edit
+    - Given the Account Name and other standard fields are completed with valid values,
+      when the user clicks Save, then a new Account record is created with the entered
+      values
     assignee: null
     derived: false
     description: ''
@@ -70,4 +72,4 @@ extracted_profile:
     title: Create Account record with standard fields
     type: story
 schema_version: 1
-updated_at: '2026-06-29T14:19:09.910738+00:00'
+updated_at: '2026-06-29T14:19:14.235275+00:00'
