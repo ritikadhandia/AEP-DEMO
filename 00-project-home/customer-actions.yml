@@ -1,0 +1,3 @@
+schema_version: 1
+# Actions the customer needs to take (from SOW + discovery extraction).
+actions: []

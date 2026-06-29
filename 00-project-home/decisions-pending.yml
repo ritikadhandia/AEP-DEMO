@@ -1,0 +1,4 @@
+schema_version: 1
+# Decisions awaiting human approval. The leader agent appends here;
+# humans approve/revise via the UI which moves them to .agentic/decisions.yml.
+pending: []

@@ -1,0 +1,7 @@
+# Markdown uses union merge driver: keeps both sides when conflicts occur,
+# so auto-merge succeeds even on overlapping edits. A downstream cleanup
+# pass can de-dupe if needed.
+*.md merge=union
+
+# YAML files merge normally - conflicts here are usually meaningful and
+# deserve human review.

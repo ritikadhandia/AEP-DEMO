@@ -1,0 +1,4 @@
+schema_version: 1
+# Lightweight catalogue of every feedback entry. Updated by
+# app/feedback_service.py on every submit / status change.
+entries: []

@@ -1,0 +1,6 @@
+schema_version: 1
+# Multi-workshop series plan. Populated by workshop_ops agent.
+goal: ""
+recommended_session_count: null
+effective_session_count: null
+sessions: []

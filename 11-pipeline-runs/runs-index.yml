@@ -1,0 +1,4 @@
+schema_version: 1
+# History of every agent pipeline run. Each run gets its own subfolder
+# named run-<timestamp>-<id>/ containing inputs + per-tier outputs.
+runs: []

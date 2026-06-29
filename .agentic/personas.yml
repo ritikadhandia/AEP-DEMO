@@ -1,0 +1,9 @@
+schema_version: 1
+roles_catalog:
+  - {code: solution_architect,  short: sa,  display: "Solution Architect",   max: 4}
+  - {code: technical_architect, short: ta,  display: "Technical Architect",  max: 4}
+  - {code: developer,           short: dev, display: "Developer",            max: 10}
+  - {code: qa_lead,             short: qa,  display: "QA Lead",              max: 3}
+  - {code: project_manager,     short: pm,  display: "Project Manager",      max: 2}
+  - {code: change_lead,         short: cl,  display: "Change Lead",          max: 2}
+assignments: []

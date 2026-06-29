@@ -1,0 +1,4 @@
+schema_version: 1
+# Full history of decisions (approved, revised, closed). Mirrors the
+# 'decisions' table previously kept in SQLite.
+decisions: []

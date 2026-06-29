@@ -1,0 +1,3 @@
+schema_version: 1
+# Target systems that need to integrate with the solution.
+integrations: []

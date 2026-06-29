@@ -1,0 +1,5 @@
+schema_version: 1
+# Metadata only - actual tokens stay in the OS keychain.
+connected: false
+org_id: ""
+instance_url: ""

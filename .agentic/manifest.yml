@@ -1,0 +1,4 @@
+schema_version: 1
+# Tracks every artifact file: path -> owning persona, last modified, etc.
+# Updated on every auto-commit.
+files: {}

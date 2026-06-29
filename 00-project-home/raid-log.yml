@@ -1,0 +1,7 @@
+schema_version: 1
+# Risks, Assumptions, Issues, Dependencies - rolled up from every doc
+# whose 'Project Home' checkbox is on. Edited by the home-rollup agent.
+risks: []
+assumptions: []
+issues: []
+dependencies: []

@@ -1,0 +1,3 @@
+schema_version: 1
+# Optional per-file edit locks. Empty = no locks active.
+locks: []

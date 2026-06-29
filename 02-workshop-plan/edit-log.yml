@@ -1,0 +1,4 @@
+schema_version: 1
+# Append-only log of every manual edit to the workshop plan. Used to
+# prevent agent regeneration from overwriting human changes.
+entries: []

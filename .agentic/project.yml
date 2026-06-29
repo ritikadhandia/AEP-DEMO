@@ -1,0 +1,11 @@
+schema_version: 1
+project:
+  id: 050be6cc-0c67-4149-9fe4-21e88a078983
+  name: "AEPDEMO"
+  git_url: "https://github.com/ritikadhandia/AEP-DEMO"
+  default_branch: main
+  created_by: "rdhandia@salesforce.com"
+  created_at: 2026-06-29T06:17:35.447220+00:00
+agentic:
+  tool_version: "0.1.0"
+  scaffolded_at: 2026-06-29T06:17:35.447220+00:00

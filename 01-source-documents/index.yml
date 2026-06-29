@@ -1,0 +1,4 @@
+schema_version: 1
+# Catalogue of every uploaded source document. Each entry points to a
+# subfolder containing the original file + extracted text + classification.
+documents: []
