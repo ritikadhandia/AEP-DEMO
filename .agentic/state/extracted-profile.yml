@@ -59,7 +59,7 @@ extracted_profile:
     sprint: null
     status: backlog
     story_points: null
-    title: New user story — click to edit
+    title: Create Account record with standard fields
     type: story
 schema_version: 1
-updated_at: '2026-06-29T14:17:55.035887+00:00'
+updated_at: '2026-06-29T14:18:00.735049+00:00'
