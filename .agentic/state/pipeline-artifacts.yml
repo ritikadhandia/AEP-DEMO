@@ -103,6 +103,158 @@ pipeline_artifacts:
       steps_passed: 8
       test_id: TC-001
       title: Leasing agent returns top-3 matching units and enforces required City
+  - aborted: false
+    completed_at: '2026-06-29T18:34:35.836449+00:00'
+    defects:
+    - created_at: '2026-06-29T18:34:35.836464+00:00'
+      defect_id: DEF-001
+      error: 'Stopped after 2 consecutive failed attempts. Last issue: fill failed
+        — Element was not visible after timeout — page may not have rendered it in
+        time'
+      jira_key: ''
+      jira_pushed_at: ''
+      linked_story: US-001
+      persona: Default
+      resolved_at: ''
+      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-001-failure.png
+      severity: Medium
+      status: open
+      story_title: ''
+      test_id: TC-001
+      title: Custom Lead intake form with Indian mobile validation
+    executed_by: 'Test Execution Agent — '
+    execution_id: EXEC-ea79642a
+    org_url: https://login.salesforce.com
+    started_at: '2026-06-29T18:32:30.937156+00:00'
+    summary:
+      failed: 1
+      pass_rate: 0%
+      passed: 0
+      skipped: 0
+      total: 1
+    test_results:
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 112.4
+      executor: mcp
+      failure_detail: 'Stopped after 2 consecutive failed attempts. Last issue: fill
+        failed — Element was not visible after timeout — page may not have rendered
+        it in time'
+      linked_story: US-001
+      persona: Default
+      screenshot: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-001-failure.png
+      skipped: false
+      status: failed
+      step_results:
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to Main Co"
+        elapsed_seconds: 9.4
+        purpose: Click the App Launcher icon to open the menu
+        status: passed
+        step: 1
+        target: e17
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/list\n\
+          page_title: Lightning Experience | Salesforce\nelements:\n  e1: <a> 'Skip\
+          \ to Navigation'\n  e2: <a"
+        elapsed_seconds: 19.9
+        purpose: Click on the Leads tab to navigate to the Leads list view
+        status: passed
+        step: 2
+        target: e24
+      - action: click_by_selector
+        detail: no visible element matches 'button[name="New"]'. The hint may be wrong
+          for this org — take a fresh snapshot and click the element by its visible
+          label/ref instead.
+        elapsed_seconds: 32.6
+        purpose: Click the New button on the Leads list view to open custom Lead intake
+          form
+        status: failed
+        step: 3
+        target: ''
+      - action: click
+        detail: 'Clicked successfully
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.eyJ0eXBlIjoic3RhbmRhcmRfX29iamVjdFBhZ2UiLCJhdHRyaWJ1dGVzIjp7Im9iamVjdEFwaU5hbWU'
+        elapsed_seconds: 39.1
+        purpose: Click the New button to open the Lead intake form
+        status: passed
+        step: 4
+        target: e35
+      - action: press_key
+        detail: Pressed 'ArrowDown' successfully
+        elapsed_seconds: 57.5
+        purpose: Scroll down to see if Lead Source field is below
+        status: passed
+        step: 5
+        target: ''
+      - action: verify_text
+        detail: 'Verified: ''First Name'' is visible on the page'
+        elapsed_seconds: 69.6
+        purpose: First Name
+        status: passed
+        step: 6
+        target: First Name
+      - action: verify_text
+        detail: 'Verified: ''Last Name'' is visible on the page'
+        elapsed_seconds: 75.6
+        purpose: Last Name
+        status: passed
+        step: 7
+        target: Last Name
+      - action: verify_text
+        detail: 'Verified: ''Mobile'' is visible on the page'
+        elapsed_seconds: 81.6
+        purpose: Mobile
+        status: passed
+        step: 8
+        target: Mobile
+      - action: verify_text
+        detail: 'Verified: ''Email'' is visible on the page'
+        elapsed_seconds: 86.0
+        purpose: Email
+        status: passed
+        step: 9
+        target: Email
+      - action: verify_text
+        detail: '''Lead Source'' was not visible on the page after waiting. If this
+          is a final assertion, take a fresh snapshot to re-check or call finish —
+          do NOT click or navigate to hunt for it.'
+        elapsed_seconds: 94.1
+        purpose: Lead Source
+        status: failed
+        step: 10
+        target: Lead Source
+      - action: fill_by_selector
+        detail: no visible element matches 'input[placeholder="First Name"]'. The
+          hint may be wrong for this org — take a fresh snapshot and fill the field
+          by its visible label/placeholder/ref instead.
+        elapsed_seconds: 100.0
+        purpose: Fill the First Name field with 'Rajesh'
+        status: failed
+        step: 11
+        target: ''
+      - action: fill
+        detail: fill failed — Element was not visible after timeout — page may not
+          have rendered it in time
+        elapsed_seconds: 112.3
+        purpose: Fill the First Name field with 'Rajesh'
+        status: failed
+        step: 12
+        target: e35
+      steps_executed: 12
+      steps_passed: 8
+      summary: null
+      test_id: TC-001
+      title: Custom Lead intake form with Indian mobile validation
   test_scripts:
     generated_at: '2026-06-29T06:42:25.934839+00:00'
     generated_from: Standalone run — 1 user stories in 1 batch(es)
@@ -227,4 +379,4 @@ pipeline_artifacts:
     test_suite: Generated test suite — 1 user stories
     total_tests: 1
 schema_version: 1
-updated_at: '2026-06-29T14:19:38.171707+00:00'
+updated_at: '2026-06-29T18:34:35.843331+00:00'
