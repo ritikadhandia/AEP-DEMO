@@ -47,6 +47,7 @@ extracted_profile:
   - acceptance_criteria:
     - Given an Account Executive is on the Accounts list view, when they click the
       'New' button, then the standard 'New Account' creation modal opens
+    - New criterion — click to edit
     assignee: null
     derived: false
     description: ''
@@ -64,4 +65,4 @@ extracted_profile:
     title: Create Account record with standard fields
     type: story
 schema_version: 1
-updated_at: '2026-06-29T14:18:46.730475+00:00'
+updated_at: '2026-06-29T14:18:52.178474+00:00'
