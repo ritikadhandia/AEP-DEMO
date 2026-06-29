@@ -1,7 +1,8 @@
 sandbox_prototypes:
 - comments: []
   created_at: '2026-06-29T06:39:22.803961+00:00'
-  deploy_status: pending
+  deploy_error: 'Deploy submit failed (401): [{"message":"INVALID_AUTH_HEADER","errorCode":"INVALID_AUTH_HEADER"}]'
+  deploy_status: failed
   deploy_target: DevOrgDynamicQues
   deploy_url: https://orgfarm-5fe94d0562-dev-ed.develop.my.salesforce.com
   html: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\"\
@@ -493,6 +494,155 @@ sandbox_prototypes:
     \       showToast(`Filter applied: ${this.value}`, 'success');\n            });\n\
     \        });\n    </script>\n</body>\n</html>"
   id: '41563920'
+  metadata_spec:
+    deep_link_target: /lightning/o/AgenticDemo_IndianLead__c/list?filterName=All
+    objects:
+    - deploymentStatus: Deployed
+      fields:
+      - fullName: Mobile_Number__c
+        label: Mobile Number
+        type: Phone
+      - fullName: State__c
+        label: State
+        picklistValues:
+        - Maharashtra
+        - Karnataka
+        - Tamil Nadu
+        - Delhi
+        - Gujarat
+        - West Bengal
+        - Rajasthan
+        - Uttar Pradesh
+        - Telangana
+        - Kerala
+        type: Picklist
+      - fullName: Lead_Source__c
+        label: Lead Source
+        picklistValues:
+        - Website
+        - Social Media
+        - WhatsApp Campaign
+        - Referral
+        - Trade Show
+        - Cold Call
+        type: Picklist
+      - fullName: Preferred_Language__c
+        label: Preferred Language
+        picklistValues:
+        - English
+        - Hindi
+        - Marathi
+        - Tamil
+        - Telugu
+        - Gujarati
+        - Bengali
+        - Kannada
+        type: Picklist
+      - fullName: Company_Size__c
+        label: Company Size
+        picklistValues:
+        - Startup (1-10)
+        - Small (11-50)
+        - Medium (51-200)
+        - Large (201-1000)
+        - Enterprise (1000+)
+        type: Picklist
+      - fullName: Annual_Revenue_INR__c
+        label: Annual Revenue (INR)
+        precision: 16
+        scale: 2
+        type: Currency
+      - fullName: Lead_Score__c
+        label: Lead Score
+        precision: 3
+        scale: 0
+        type: Number
+      - defaultValue: false
+        fullName: Mobile_Verified__c
+        label: Mobile Verified
+        type: Checkbox
+      - fullName: Comments__c
+        label: Comments
+        length: 32768
+        type: LongTextArea
+        visibleLines: 4
+      fullName: AgenticDemo_IndianLead__c
+      label: Indian Market Lead
+      nameField:
+        label: Lead Name
+        type: Text
+      pluralLabel: Indian Market Leads
+      sample_records:
+      - Annual_Revenue_INR__c: 25000000
+        Comments__c: Interested in enterprise package. CEO wants demo next week.
+        Company_Size__c: Medium (51-200)
+        Lead_Score__c: 85
+        Lead_Source__c: Website
+        Mobile_Number__c: +91-9876543210
+        Mobile_Verified__c: true
+        Name: Rajesh Kumar - TechStart Solutions
+        Preferred_Language__c: English
+        State__c: Maharashtra
+      - Annual_Revenue_INR__c: 8500000
+        Comments__c: Small business owner, looking for cost-effective solution. Prefers
+          Hindi communication.
+        Company_Size__c: Small (11-50)
+        Lead_Score__c: 72
+        Lead_Source__c: WhatsApp Campaign
+        Mobile_Number__c: +91-8765432109
+        Mobile_Verified__c: true
+        Name: Priya Sharma - Mumbai Innovations
+        Preferred_Language__c: Hindi
+        State__c: Maharashtra
+      - Annual_Revenue_INR__c: 150000000
+        Comments__c: CTO of growing startup. Needs scalable solution for team of 300+
+          developers.
+        Company_Size__c: Large (201-1000)
+        Lead_Score__c: 91
+        Lead_Source__c: Social Media
+        Mobile_Number__c: +91-7654321098
+        Mobile_Verified__c: false
+        Name: Arjun Reddy - Bangalore Tech Hub
+        Preferred_Language__c: English
+        State__c: Karnataka
+      - Annual_Revenue_INR__c: 500000000
+        Comments__c: Met at Manufacturing Expo. Large textile business seeking digital
+          transformation.
+        Company_Size__c: Enterprise (1000+)
+        Lead_Score__c: 95
+        Lead_Source__c: Trade Show
+        Mobile_Number__c: +91-6543210987
+        Mobile_Verified__c: true
+        Name: Deepika Patel - Gujarat Manufacturing
+        Preferred_Language__c: Gujarati
+        State__c: Gujarat
+      - Annual_Revenue_INR__c: 35000000
+        Comments__c: Referred by existing customer. Owns retail chain, interested
+          in inventory management features.
+        Company_Size__c: Medium (51-200)
+        Lead_Score__c: 68
+        Lead_Source__c: Referral
+        Mobile_Number__c: +91-5432109876
+        Mobile_Verified__c: false
+        Name: Vikram Singh - Delhi Retail Chain
+        Preferred_Language__c: Hindi
+        State__c: Delhi
+      - Annual_Revenue_INR__c: 12000000
+        Comments__c: Service-based company. New to digital tools, needs training and
+          support.
+        Company_Size__c: Small (11-50)
+        Lead_Score__c: 55
+        Lead_Source__c: Website
+        Mobile_Number__c: +91-4321098765
+        Mobile_Verified__c: true
+        Name: Ananya Chakraborty - Kolkata Services
+        Preferred_Language__c: Bengali
+        State__c: West Bengal
+      sharingModel: ReadWrite
+    package_name: AgenticPrototype
+    sample_data_query: SELECT Id, Name FROM AgenticDemo_IndianLead__c LIMIT 10
+    summary: Demonstrates a custom Lead intake form with specialized fields for Indian
+      market including mobile number validation and regional preferences.
   status: generated
   story_id: US-001
   story_text: ''
@@ -500,4 +650,4 @@ sandbox_prototypes:
   target: salesforce
   title: Custom Lead Intake Form with Mobile Validation
 schema_version: 1
-updated_at: '2026-06-29T06:40:31.520431+00:00'
+updated_at: '2026-06-29T06:40:49.113732+00:00'
