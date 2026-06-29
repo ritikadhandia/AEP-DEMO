@@ -50,6 +50,8 @@ extracted_profile:
     - Given the New Account modal is displayed, when the user views the form, then
       the standard Account fields including Account Name, Phone, Website, Type and
       Industry are available for entry
+    - Given no Account Name has been entered, when the user clicks Save, then a required-field
+      error is shown and the record is not saved
     - New criterion — click to edit
     assignee: null
     derived: false
@@ -68,4 +70,4 @@ extracted_profile:
     title: Create Account record with standard fields
     type: story
 schema_version: 1
-updated_at: '2026-06-29T14:19:02.166612+00:00'
+updated_at: '2026-06-29T14:19:09.910738+00:00'
