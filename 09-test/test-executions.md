@@ -7,7 +7,8 @@
 | EXEC-896c6002 | Ad-hoc | passed | 2026-06-29T20:28:13.206979+00:00 | 1/1 | 0 |
 | EXEC-ac3301ae | Ad-hoc | failed | 2026-06-30T06:01:13.333850+00:00 | 0/1 | 0 |
 | EXEC-8ed64338 | Ad-hoc | failed | 2026-06-30T07:29:13.782501+00:00 | 0/1 | 0 |
+| EXEC-e59e265d | Ad-hoc | failed | 2026-06-30T16:23:19.794255+00:00 | 0/1 | 1 |
 
 
 ---
-_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_executions`. Last updated: 2026-06-30T16:20:26.189440+00:00._
+_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_executions`. Last updated: 2026-06-30T16:25:00.879232+00:00._

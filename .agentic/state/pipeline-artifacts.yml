@@ -1187,6 +1187,192 @@ pipeline_artifacts:
       test_id: TC-001
       title: Verify custom Lead intake form with Indian mobile validation and mandatory
         fields
+  - aborted: false
+    completed_at: '2026-06-30T16:25:00.819363+00:00'
+    defects:
+    - created_at: '2026-06-30T16:25:00.819380+00:00'
+      defect_id: DEF-003
+      error: 'Stopped after 2 consecutive failed attempts. Last issue: ''Mobile field
+        shows validation error'' was not visible on the page after waiting. If this
+        is a final assertion, take a fresh snapshot to re-check or call finish — do
+        NOT click or navigate to hunt for i'
+      jira_key: ''
+      jira_pushed_at: ''
+      linked_story: US-001
+      persona: Default
+      resolved_at: ''
+      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-003-failure.png
+      severity: Medium
+      status: open
+      story_title: ''
+      test_id: TC-003
+      title: 'Custom Lead intake form — Negative Path: Invalid Indian Mobile Format'
+    executed_by: 'Test Execution Agent — '
+    execution_id: EXEC-e59e265d
+    org_url: https://login.salesforce.com
+    started_at: '2026-06-30T16:23:19.794255+00:00'
+    summary:
+      failed: 1
+      pass_rate: 0%
+      passed: 0
+      skipped: 0
+      total: 1
+    test_results:
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 87.7
+      executor: mcp
+      failure_detail: 'Stopped after 2 consecutive failed attempts. Last issue: ''Mobile
+        field shows validation error'' was not visible on the page after waiting.
+        If this is a final assertion, take a fresh snapshot to re-check or call finish
+        — do NOT click or navigate to hunt for i'
+      linked_story: US-001
+      persona: Default
+      screenshot: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-003-failure.png
+      skipped: false
+      status: failed
+      step_results:
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to Main Co"
+        elapsed_seconds: 10.5
+        purpose: Click the App Launcher waffle icon in the top-left corner
+        status: passed
+        step: 1
+        target: e17
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/list\n\
+          page_title: Lightning Experience | Salesforce\nelements:\n  e1: <a> 'Skip\
+          \ to Navigation'\n  e2: <a"
+        elapsed_seconds: 16.7
+        purpose: Click on 'Leads' in the navigation to navigate to the Leads object
+        status: passed
+        step: 2
+        target: e30
+      - action: click_by_selector
+        detail: 'Clicked successfully (self-healed: matched by its rendered label
+          ''New'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.eyJ0eXBlIjoic3RhbmRhcmRfX29i'
+        elapsed_seconds: 25.6
+        purpose: Click the 'New' button on the Leads list view page
+        status: passed
+        step: 3
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 5 characters successfully (self-healed: matched the field by
+          its rendered label ''First Name'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.'
+        elapsed_seconds: 40.3
+        purpose: Fill First Name field with 'Priya'
+        status: passed
+        step: 4
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 5 characters successfully (self-healed: matched the field by
+          its rendered label ''Last Name'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.e'
+        elapsed_seconds: 44.8
+        purpose: Fill Last Name field with 'Singh'
+        status: passed
+        step: 5
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 10 characters successfully (self-healed: matched the field
+          by its rendered label ''Mobile'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.eyJ'
+        elapsed_seconds: 49.9
+        purpose: Fill Mobile field with invalid mobile number '1234567890'
+        status: passed
+        step: 6
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 23 characters successfully (self-healed: matched the field
+          by its rendered label ''Email'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.eyJ0'
+        elapsed_seconds: 54.9
+        purpose: Fill Email field with 'priya.singh@example.com'
+        status: passed
+        step: 7
+        target: ''
+      - action: select_picklist
+        detail: 'Selected ''Phone Inquiry'' in ''button[role="combobox"][aria-label="Lead
+          Source"]''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.eyJ0eXBlIjoic3RhbmRh'
+        elapsed_seconds: 60.4
+        purpose: Select 'Phone Inquiry' from Lead Source picklist
+        status: passed
+        step: 8
+        target: ''
+      - action: click_by_selector
+        detail: 'Clicked successfully (self-healed: matched by its rendered label
+          ''Save'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.eyJ0eXBlIjoic3RhbmRhcmRfX29'
+        elapsed_seconds: 67.3
+        purpose: Click Save button to attempt form submission and trigger validation
+        status: passed
+        step: 9
+        target: ''
+      - action: verify_text
+        detail: '''validation error'' was not visible on the page after waiting. If
+          this is a final assertion, take a fresh snapshot to re-check or call finish
+          — do NOT click or navigate to hunt for it.'
+        elapsed_seconds: 81.1
+        purpose: validation error
+        status: failed
+        step: 10
+        target: validation error
+      - action: verify_text
+        detail: '''Mobile field shows validation error'' was not visible on the page
+          after waiting. If this is a final assertion, take a fresh snapshot to re-check
+          or call finish — do NOT click or navigate to hunt for it.'
+        elapsed_seconds: 87.7
+        purpose: Mobile field shows validation error
+        status: failed
+        step: 11
+        target: Mobile field shows validation error
+      steps_executed: 11
+      steps_passed: 9
+      summary: null
+      test_id: TC-003
+      title: 'Custom Lead intake form — Negative Path: Invalid Indian Mobile Format'
   test_scripts:
     generated_at: '2026-06-30T16:12:18.231097+00:00'
     generated_from: Standalone run — 1 user stories in 1 batch(es)
@@ -1665,4 +1851,4 @@ pipeline_artifacts:
     test_suite: Generated test suite — 1 user stories
     total_tests: 6
 schema_version: 1
-updated_at: '2026-06-30T16:20:26.130433+00:00'
+updated_at: '2026-06-30T16:25:00.822933+00:00'
