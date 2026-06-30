@@ -931,6 +931,332 @@ pipeline_artifacts:
       summary: null
       test_id: TC-001
       title: Custom Lead intake form opens and validates Indian mobile format
+  - aborted: false
+    completed_at: '2026-06-30T07:32:24.903676+00:00'
+    defects:
+    - created_at: '2026-06-30T07:32:24.903690+00:00'
+      defect_id: DEF-001
+      error: Custom Lead intake form mostly works as expected, but Indian mobile validation
+        appears not to be implemented. The form correctly shows only 5 required fields,
+        validates incomplete submissions with proper error messages, successfully
+        creates leads, and automatically navigates to the record page. However, the
+        mobile number '9876543210' was accepted without validation error, suggesting
+        the Indian mobile format validation (+91 requirement) is not yet implemented.
+      jira_key: ''
+      jira_pushed_at: ''
+      linked_story: US-001
+      persona: Default
+      resolved_at: ''
+      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-001-failure.png
+      severity: Medium
+      status: open
+      story_title: ''
+      test_id: TC-001
+      title: Verify custom Lead intake form with Indian mobile validation and mandatory
+        fields
+    executed_by: 'Test Execution Agent — '
+    execution_id: EXEC-8ed64338
+    org_url: https://login.salesforce.com
+    started_at: '2026-06-30T07:29:13.782501+00:00'
+    summary:
+      failed: 1
+      pass_rate: 0%
+      passed: 0
+      skipped: 0
+      total: 1
+    test_results:
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 180.8
+      executor: mcp
+      failure_detail: Custom Lead intake form mostly works as expected, but Indian
+        mobile validation appears not to be implemented. The form correctly shows
+        only 5 required fields, validates incomplete submissions with proper error
+        messages, successfully creates leads, and automatically navigates to the record
+        page. However, the mobile number '9876543210' was accepted without validation
+        error, suggesting the Indian mobile format validation (+91 requirement) is
+        not yet implemented.
+      linked_story: US-001
+      persona: Default
+      screenshot: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-001-failure.png
+      skipped: false
+      status: failed
+      step_results:
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to Main Co"
+        elapsed_seconds: 9.4
+        purpose: click App Launcher icon
+        status: passed
+        step: 1
+        target: e17
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/list\n\
+          page_title: Lightning Experience | Salesforce\nelements:\n  e1: <a> 'Skip\
+          \ to Navigation'\n  e2: <a"
+        elapsed_seconds: 15.5
+        purpose: click Leads tab
+        status: passed
+        step: 2
+        target: e27
+      - action: click
+        detail: 'Clicked successfully
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.eyJ0eXBlIjoic3RhbmRhcmRfX29iamVjdFBhZ2UiLCJhdHRyaWJ1dGVzIjp7Im9iamVjdEFwaU5hbWU'
+        elapsed_seconds: 23.3
+        purpose: click New button
+        status: passed
+        step: 3
+        target: e35
+      - action: verify_text
+        detail: 'Verified: ''First Name'' is visible on the page'
+        elapsed_seconds: 31.5
+        purpose: First Name
+        status: passed
+        step: 4
+        target: First Name
+      - action: verify_text
+        detail: 'Verified: ''Last Name'' is visible on the page'
+        elapsed_seconds: 38.1
+        purpose: Last Name
+        status: passed
+        step: 5
+        target: Last Name
+      - action: verify_text
+        detail: 'Verified: ''Mobile'' is visible on the page'
+        elapsed_seconds: 40.6
+        purpose: Mobile
+        status: passed
+        step: 6
+        target: Mobile
+      - action: verify_text
+        detail: 'Verified: ''Email'' is visible on the page'
+        elapsed_seconds: 43.5
+        purpose: Email
+        status: passed
+        step: 7
+        target: Email
+      - action: verify_text
+        detail: 'Verified: ''Lead Source'' is visible on the page'
+        elapsed_seconds: 46.3
+        purpose: Lead Source
+        status: passed
+        step: 8
+        target: Lead Source
+      - action: fill_by_selector
+        detail: 'Typed 6 characters successfully (self-healed: selector ''input[placeholder="First
+          Name"]'' missed; matched the field by its rendered label ''First Name'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightni'
+        elapsed_seconds: 50.8
+        purpose: fill First Name field
+        status: passed
+        step: 9
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 5 characters successfully (self-healed: selector ''input[placeholder="Last
+          Name"]'' missed; matched the field by its rendered label ''Last Name'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning'
+        elapsed_seconds: 55.8
+        purpose: fill Last Name field
+        status: passed
+        step: 10
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 10 characters successfully (self-healed: selector ''input[name="MobilePhone"]''
+          missed; matched the field by its rendered label ''Mobile'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.'
+        elapsed_seconds: 60.4
+        purpose: fill Mobile field with invalid format
+        status: passed
+        step: 11
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 24 characters successfully (self-healed: selector ''input[name="Email"]''
+          missed; matched the field by its rendered label ''Email'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lig'
+        elapsed_seconds: 64.8
+        purpose: fill Email field
+        status: passed
+        step: 12
+        target: ''
+      - action: select_picklist
+        detail: 'Selected ''Web'' in ''button[role="combobox"][aria-label="Lead Source"]''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.eyJ0eXBlIjoic3RhbmRhcmRfX29iam'
+        elapsed_seconds: 70.3
+        purpose: select Lead Source value Web
+        status: passed
+        step: 13
+        target: ''
+      - action: click
+        detail: the click did not land — the element likely re-rendered or is not
+          visible yet. Take a FRESH snapshot and click it again by its current ref
+          / visible label. (Element was not visible after timeout — page may not have
+          rendered it in time)
+        elapsed_seconds: 85.2
+        purpose: click Save to test mobile validation
+        status: failed
+        step: 14
+        target: e45
+      - action: click
+        detail: the click did not land — the element likely re-rendered or is not
+          visible yet. Take a FRESH snapshot and click it again by its current ref
+          / visible label. (Element was not visible after timeout — page may not have
+          rendered it in time)
+        elapsed_seconds: 103.1
+        purpose: click Save button to test validation
+        status: failed
+        step: 15
+        target: e45
+      - action: click_by_selector
+        detail: 'Clicked element matching ''button:has-text("Save")''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/r/Lead/00Qg7000008nNS1EAM/view
+
+          page_title: Lightning Experience | Salesforce
+
+          '
+        elapsed_seconds: 108.9
+        purpose: click Save button
+        status: passed
+        step: 16
+        target: ''
+      - action: verify_text
+        detail: 'Verified: ''Rajesh Kumar'' is visible on the page'
+        elapsed_seconds: 113.8
+        purpose: Rajesh Kumar
+        status: passed
+        step: 17
+        target: Rajesh Kumar
+      - action: verify_text
+        detail: 'Verified: ''9876543210'' is visible on the page'
+        elapsed_seconds: 118.0
+        purpose: '9876543210'
+        status: passed
+        step: 18
+        target: '9876543210'
+      - action: verify_text
+        detail: 'Verified: ''rajesh.kumar@example.com'' is visible on the page'
+        elapsed_seconds: 122.2
+        purpose: rajesh.kumar@example.com
+        status: passed
+        step: 19
+        target: rajesh.kumar@example.com
+      - action: navigate
+        detail: 'Navigated to https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/list
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/list?filterName=__R'
+        elapsed_seconds: 133.3
+        purpose: navigate to Leads list view
+        status: passed
+        step: 20
+        target: /lightning/o/Lead/list
+      - action: click
+        detail: 'Clicked successfully
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.eyJ0eXBlIjoic3RhbmRhcmRfX29iamVjdFBhZ2UiLCJhdHRyaWJ1dGVzIjp7Im9iamVjdEFwaU5hbWU'
+        elapsed_seconds: 139.9
+        purpose: click New button again
+        status: passed
+        step: 21
+        target: e35
+      - action: fill
+        detail: fill failed — Element was not visible after timeout — page may not
+          have rendered it in time
+        elapsed_seconds: 152.2
+        purpose: fill First Name with Test
+        status: failed
+        step: 22
+        target: e35
+      - action: fill_by_selector
+        detail: 'Typed 4 characters successfully (self-healed: selector ''input[placeholder="First
+          Name"]'' missed; matched the field by its rendered label ''First Name'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightni'
+        elapsed_seconds: 157.4
+        purpose: fill First Name field with Test
+        status: passed
+        step: 23
+        target: ''
+      - action: click_by_selector
+        detail: 'Clicked element matching ''button:has-text("Save")''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.eyJ0eXBlIjoic3RhbmRhcmRfX29iamVjdFBhZ2UiLCJhdHRya'
+        elapsed_seconds: 162.7
+        purpose: click Save with incomplete fields
+        status: passed
+        step: 24
+        target: ''
+      - action: verify_text
+        detail: 'Verified: ''Complete this field.'' is visible on the page'
+        elapsed_seconds: 168.3
+        purpose: Complete this field.
+        status: passed
+        step: 25
+        target: Complete this field.
+      steps_executed: 25
+      steps_passed: 22
+      summary: Custom Lead intake form mostly works as expected, but Indian mobile
+        validation appears not to be implemented. The form correctly shows only 5
+        required fields, validates incomplete submissions with proper error messages,
+        successfully creates leads, and automatically navigates to the record page.
+        However, the mobile number '9876543210' was accepted without validation error,
+        suggesting the Indian mobile format validation (+91 requirement) is not yet
+        implemented.
+      test_id: TC-001
+      title: Verify custom Lead intake form with Indian mobile validation and mandatory
+        fields
   test_scripts:
     generated_at: '2026-06-30T07:28:45.045223+00:00'
     generated_from: Standalone run — 1 user stories in 1 batch(es)
@@ -1217,4 +1543,4 @@ pipeline_artifacts:
     test_suite: Generated test suite — 1 user stories
     total_tests: 2
 schema_version: 1
-updated_at: '2026-06-30T07:28:45.058196+00:00'
+updated_at: '2026-06-30T07:32:24.909662+00:00'
