@@ -82,23 +82,7 @@ pipeline_artifacts:
   test_executions:
   - aborted: false
     completed_at: '2026-06-29T18:34:35.836449+00:00'
-    defects:
-    - created_at: '2026-06-29T18:34:35.836464+00:00'
-      defect_id: DEF-001
-      error: 'Stopped after 2 consecutive failed attempts. Last issue: fill failed
-        — Element was not visible after timeout — page may not have rendered it in
-        time'
-      jira_key: ''
-      jira_pushed_at: ''
-      linked_story: US-001
-      persona: Default
-      resolved_at: ''
-      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-001-failure.png
-      severity: Medium
-      status: open
-      story_title: ''
-      test_id: TC-001
-      title: Custom Lead intake form with Indian mobile validation
+    defects: []
     executed_by: 'Test Execution Agent — '
     execution_id: EXEC-ea79642a
     org_url: https://login.salesforce.com
@@ -234,25 +218,7 @@ pipeline_artifacts:
       title: Custom Lead intake form with Indian mobile validation
   - aborted: false
     completed_at: '2026-06-29T20:11:04.085508+00:00'
-    defects:
-    - created_at: '2026-06-29T20:11:04.085533+00:00'
-      defect_id: DEF-001
-      error: 'Test partially failed: Custom Lead intake form exists with only 4 mandatory
-        fields (missing Lead Source), and Indian mobile validation is not configured
-        in this org. The form accepts invalid format ''1234567890'' without error.
-        Lead record was successfully created but validation requirements were not
-        met.'
-      jira_key: ''
-      jira_pushed_at: ''
-      linked_story: US-001
-      persona: Default
-      resolved_at: ''
-      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-001-failure.png
-      severity: Medium
-      status: open
-      story_title: ''
-      test_id: TC-001
-      title: Custom Lead intake form with Indian mobile validation
+    defects: []
     executed_by: 'Test Execution Agent — '
     execution_id: EXEC-ae52425b
     org_url: https://login.salesforce.com
@@ -764,23 +730,7 @@ pipeline_artifacts:
         Field Validation
   - aborted: false
     completed_at: '2026-06-30T06:02:49.238265+00:00'
-    defects:
-    - created_at: '2026-06-30T06:02:49.238278+00:00'
-      defect_id: DEF-001
-      error: 'Stopped after 2 consecutive failed attempts. Last issue: fill failed
-        — Element was not visible after timeout — page may not have rendered it in
-        time'
-      jira_key: ''
-      jira_pushed_at: ''
-      linked_story: US-001
-      persona: Default
-      resolved_at: ''
-      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-001-failure.png
-      severity: Medium
-      status: open
-      story_title: ''
-      test_id: TC-001
-      title: Custom Lead intake form opens and validates Indian mobile format
+    defects: []
     executed_by: 'Test Execution Agent — '
     execution_id: EXEC-ac3301ae
     org_url: https://login.salesforce.com
@@ -1543,4 +1493,4 @@ pipeline_artifacts:
     test_suite: Generated test suite — 1 user stories
     total_tests: 2
 schema_version: 1
-updated_at: '2026-06-30T07:32:24.909662+00:00'
+updated_at: '2026-06-30T10:57:35.741080+00:00'

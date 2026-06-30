@@ -27,3 +27,5 @@
 {"id": "691f1fec", "agent": "ProjectRegistry", "message": "Restored snapshot from sql", "status": "done", "timestamp": "2026-06-29T20:26:33.005744+00:00", "trace_id": null}
 {"id": "912311b9", "agent": "ProjectRegistry", "message": "Restored snapshot from sql", "status": "done", "timestamp": "2026-06-29T20:27:22.051744+00:00", "trace_id": null}
 {"id": "fea08bdd", "agent": "ProjectRegistry", "message": "Restored snapshot from sql", "status": "done", "timestamp": "2026-06-29T20:28:01.645165+00:00", "trace_id": null}
+{"id": "1b98724a", "agent": "ProjectRegistry", "message": "Restored snapshot from sql", "status": "done", "timestamp": "2026-06-30T08:52:45.296146+00:00", "trace_id": null}
+{"id": "8143f46f", "agent": "ProjectRegistry", "message": "Restored snapshot from git (cutover)", "status": "done", "timestamp": "2026-06-30T09:34:55.264538+00:00", "trace_id": null}
