@@ -1824,6 +1824,176 @@ pipeline_artifacts:
         test steps executed successfully with 5 field visibility assertions passed.
       test_id: TC-006
       title: Create Account record with standard fields — Field Availability Verification
+  - aborted: false
+    completed_at: '2026-07-01T10:06:11.111690+00:00'
+    defects:
+    - created_at: '2026-07-01T10:06:11.111701+00:00'
+      defect_id: DEF-001
+      error: 'Stopped after 2 consecutive failed attempts. Last issue: fill_by_selector(''input[type="tel"]'')
+        appeared to succeed but the field value didn''t update (expected ''+919876543210'',
+        got ''+919876543''). The page may have re-rendered. Take a fresh snapshot
+        and try a'
+      jira_key: ''
+      jira_pushed_at: ''
+      linked_story: US-001
+      persona: Default
+      resolved_at: ''
+      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/projects/AEPDEMO/09-test/screenshots/EXEC-487a9b5a/EXEC-487a9b5a__TC-001__failure.png
+      severity: Medium
+      status: open
+      story_title: ''
+      test_id: TC-001
+      title: Custom Lead intake form — Happy Path
+    executed_by: 'Test Execution Agent — '
+    execution_id: EXEC-487a9b5a
+    org_url: https://login.salesforce.com
+    started_at: '2026-07-01T10:04:36.359705+00:00'
+    summary:
+      failed: 1
+      pass_rate: 0%
+      passed: 0
+      skipped: 0
+      total: 1
+    test_results:
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 81.2
+      executor: mcp
+      failure_detail: 'Stopped after 2 consecutive failed attempts. Last issue: fill_by_selector(''input[type="tel"]'')
+        appeared to succeed but the field value didn''t update (expected ''+919876543210'',
+        got ''+919876543''). The page may have re-rendered. Take a fresh snapshot
+        and try a'
+      linked_story: US-001
+      persona: Default
+      screenshot: /Users/ankit.kumar5/Documents/Agentic Engineering/projects/AEPDEMO/09-test/screenshots/EXEC-487a9b5a/EXEC-487a9b5a__TC-001__failure.png
+      skipped: false
+      status: failed
+      step_results:
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to Main Co"
+        elapsed_seconds: 9.7
+        purpose: Click the App Launcher waffle icon
+        status: passed
+        step: 1
+        target: e17
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/list\n\
+          page_title: Lightning Experience | Salesforce\nelements:\n  e1: <a> 'Skip\
+          \ to Navigation'\n  e2: <a"
+        elapsed_seconds: 18.5
+        purpose: Click on Leads to navigate to the Leads object
+        status: passed
+        step: 2
+        target: e30
+      - action: click_by_selector
+        detail: 'Clicked successfully (self-healed: matched by its rendered label
+          ''New'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.eyJ0eXBlIjoic3RhbmRhcmRfX29i'
+        elapsed_seconds: 26.9
+        purpose: Click the New button to open Lead form
+        status: passed
+        step: 3
+        target: ''
+      - action: verify_text
+        detail: 'Verified: ''*First Name'' is visible on the page'
+        elapsed_seconds: 34.3
+        purpose: '*First Name'
+        screenshot: EXEC-487a9b5a__TC-001__step-04__verify_text__PASS.png
+        status: passed
+        step: 4
+        target: '*First Name'
+      - action: verify_text
+        detail: 'Verified: ''*Last Name'' is visible on the page'
+        elapsed_seconds: 37.9
+        purpose: '*Last Name'
+        screenshot: EXEC-487a9b5a__TC-001__step-05__verify_text__PASS.png
+        status: passed
+        step: 5
+        target: '*Last Name'
+      - action: verify_text
+        detail: 'Verified: ''*Mobile'' is visible on the page'
+        elapsed_seconds: 40.7
+        purpose: '*Mobile'
+        screenshot: EXEC-487a9b5a__TC-001__step-06__verify_text__PASS.png
+        status: passed
+        step: 6
+        target: '*Mobile'
+      - action: verify_text
+        detail: 'Verified: ''*Email'' is visible on the page'
+        elapsed_seconds: 43.4
+        purpose: '*Email'
+        screenshot: EXEC-487a9b5a__TC-001__step-07__verify_text__PASS.png
+        status: passed
+        step: 7
+        target: '*Email'
+      - action: fill_by_selector
+        detail: 'Typed 6 characters successfully (self-healed: matched the field by
+          its rendered label ''First Name'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.'
+        elapsed_seconds: 48.6
+        purpose: Fill First Name field with 'Rajesh'
+        status: passed
+        step: 8
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 5 characters successfully (self-healed: matched the field by
+          its rendered label ''Last Name'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Lead/new?inContextOfRef=1.e'
+        elapsed_seconds: 53.5
+        purpose: Fill Last Name field with 'Kumar'
+        status: passed
+        step: 9
+        target: ''
+      - action: fill_by_selector
+        detail: no visible element matches 'input[name="MobilePhone"]'. The hint may
+          be wrong for this org — take a fresh snapshot and fill the field by its
+          visible label/placeholder/ref instead.
+        elapsed_seconds: 57.9
+        purpose: Fill Mobile field with Indian mobile number
+        status: failed
+        step: 10
+        target: ''
+      - action: fill
+        detail: fill failed — Element was not visible after timeout — page may not
+          have rendered it in time
+        elapsed_seconds: 69.6
+        purpose: Fill Mobile field with Indian mobile number
+        status: failed
+        step: 11
+        target: e36
+      - action: fill_by_selector
+        detail: fill_by_selector('input[type="tel"]') appeared to succeed but the
+          field value didn't update (expected '+919876543210', got '+919876543').
+          The page may have re-rendered. Take a fresh snapshot and try again.
+        elapsed_seconds: 81.2
+        purpose: Fill Mobile field with complete Indian mobile number
+        status: failed
+        step: 12
+        target: ''
+      steps_executed: 12
+      steps_passed: 9
+      summary: null
+      test_id: TC-001
+      title: Custom Lead intake form — Happy Path
   test_scripts:
     generated_at: '2026-07-01T07:13:31.592058+00:00'
     generated_from: Standalone run — 1 user stories in 1 batch(es)
@@ -2320,4 +2490,4 @@ pipeline_artifacts:
     test_suite: Generated test suite — 1 user stories
     total_tests: 6
 schema_version: 1
-updated_at: '2026-07-01T10:04:24.561498+00:00'
+updated_at: '2026-07-01T10:06:11.114801+00:00'

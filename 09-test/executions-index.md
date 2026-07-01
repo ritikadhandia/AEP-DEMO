@@ -9,7 +9,8 @@
 | EXEC-8ed64338 | 2026-06-30T07:29:13.782501+00:00 | failed | 0/1 | 0 |
 | EXEC-e59e265d | 2026-06-30T16:23:19.794255+00:00 | failed | 0/1 | 1 |
 | EXEC-c07991e0 | 2026-07-01T08:53:51.123896+00:00 | passed | 3/3 | 0 |
+| EXEC-487a9b5a | 2026-07-01T10:04:36.359705+00:00 | failed | 0/1 | 1 |
 
 
 ---
-_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_executions`. Last updated: 2026-07-01T10:04:24.643477+00:00._
+_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_executions`. Last updated: 2026-07-01T10:06:11.186116+00:00._

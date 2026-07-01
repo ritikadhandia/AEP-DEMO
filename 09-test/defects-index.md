@@ -2,8 +2,9 @@
 
 | Defect | Story | Test case | Severity | Status |
 | --- | --- | --- | --- | --- |
+| DEF-001 | US-001 | TC-001 | Medium | open |
 | DEF-003 | US-001 | TC-003 | Medium | open |
 
 
 ---
-_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_executions[].defects`. Last updated: 2026-07-01T10:04:24.643360+00:00._
+_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_executions[].defects`. Last updated: 2026-07-01T10:06:11.186008+00:00._
