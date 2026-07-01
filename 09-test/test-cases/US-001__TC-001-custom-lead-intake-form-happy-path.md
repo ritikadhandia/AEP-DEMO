@@ -30,15 +30,15 @@
    - ⤷ expect: Last Name field displays 'Kumar'
 7. **fill** — Mobile field (input[name="MobilePhone"])
    - _Click in the Mobile field and enter a valid Indian mobile number_
-   - `data=+919876543210`
-   - ⤷ expect: Mobile field displays '+919876543210'
+   - `data=9876543210`
+   - ⤷ expect: Mobile field displays '9876543210'
 8. **fill** — Email field (input[name="Email"])
    - _Click in the Email field and enter a valid email address_
    - `data=rajesh.kumar@example.com`
    - ⤷ expect: Email field displays 'rajesh.kumar@example.com'
 9. **select_picklist** — Lead Source (button[role="combobox"][aria-label="Lead Source"])
    - _Open the Lead Source picklist and select a valid option_
-   - `value=Web`
+   - `data=Web · value=Web`
    - ⤷ expect: Lead Source shows 'Web'
 10. **click** — Save button (button[name="SaveEdit"])
    - _Click the Save button to create the Lead record_
@@ -57,4 +57,4 @@
 
 
 ---
-_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_scripts.test_cases[TC-001]`. Last updated: 2026-07-01T10:06:11.182954+00:00._
+_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_scripts.test_cases[TC-001]`. Last updated: 2026-07-01T10:08:19.913050+00:00._

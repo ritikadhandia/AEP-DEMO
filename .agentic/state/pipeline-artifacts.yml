@@ -2237,6 +2237,8 @@ pipeline_artifacts:
       - Valid Indian mobile format is accepted
       - Lead record is created with entered values
       - User is automatically navigated to the newly created Lead record page
+      edited_at: '2026-07-01T10:08:19.817389+00:00'
+      edited_by: ankit.kumar5@salesforce.com
       estimated_duration_minutes: 4
       generated_at: '2026-06-30T15:09:43.624218+00:00'
       linked_story: US-001
@@ -2252,22 +2254,26 @@ pipeline_artifacts:
         user_profile: Sales Representative or System Administrator
       steps:
       - action: click
+        data: ''
         detail: Click the App Launcher waffle icon in the top-left corner of the page
         expected: App Launcher menu opens showing available apps and items
         step: 1
         target: App Launcher (9-dot waffle icon, top-left)
       - action: click
+        data: ''
         detail: Click on 'Leads' in the App Launcher to navigate to the Leads object
         expected: Leads list view page opens showing existing Lead records
         step: 2
         target: Leads
       - action: click
+        data: ''
         detail: Click the 'New' button on the Leads list view page
         expected: Custom Lead intake form opens instead of the standard Salesforce
           form
         step: 3
         target: New button (button[name="New"])
       - action: verify
+        data: ''
         detail: Verify that only First Name, Last Name, Mobile, Email and Lead Source
           fields are visible and all are marked as required
         expected: Only the 5 specified fields (First Name, Last Name, Mobile, Email,
@@ -2287,9 +2293,9 @@ pipeline_artifacts:
         step: 6
         target: Last Name (input[placeholder="Last Name"])
       - action: fill
-        data: '+919876543210'
+        data: '9876543210'
         detail: Click in the Mobile field and enter a valid Indian mobile number
-        expected: Mobile field displays '+919876543210'
+        expected: Mobile field displays '9876543210'
         step: 7
         target: Mobile field (input[name="MobilePhone"])
       - action: fill
@@ -2299,17 +2305,20 @@ pipeline_artifacts:
         step: 8
         target: Email field (input[name="Email"])
       - action: select_picklist
+        data: Web
         detail: Open the Lead Source picklist and select a valid option
         expected: Lead Source shows 'Web'
         step: 9
         target: Lead Source (button[role="combobox"][aria-label="Lead Source"])
         value: Web
       - action: click
+        data: ''
         detail: Click the Save button to create the Lead record
         expected: Form submits successfully and Lead record is created
         step: 10
         target: Save button (button[name="SaveEdit"])
       - action: verify
+        data: ''
         detail: Verify navigation to the newly created Lead record page
         expected: Lead record detail page opens showing the created Lead with entered
           values
@@ -2490,4 +2499,4 @@ pipeline_artifacts:
     test_suite: Generated test suite — 1 user stories
     total_tests: 6
 schema_version: 1
-updated_at: '2026-07-01T10:06:11.114801+00:00'
+updated_at: '2026-07-01T10:08:19.821164+00:00'
