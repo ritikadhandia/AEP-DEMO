@@ -1,0 +1,14 @@
+# Test executions
+
+| Run ID | Started | Status | Passed/Total | Defects |
+| --- | --- | --- | --- | --- |
+| EXEC-ea79642a | 2026-06-29T18:32:30.937156+00:00 | failed | 0/1 | 0 |
+| EXEC-ae52425b | 2026-06-29T20:06:43.767369+00:00 | failed | 0/1 | 0 |
+| EXEC-896c6002 | 2026-06-29T20:28:13.206979+00:00 | passed | 1/1 | 0 |
+| EXEC-ac3301ae | 2026-06-30T06:01:13.333850+00:00 | failed | 0/1 | 0 |
+| EXEC-8ed64338 | 2026-06-30T07:29:13.782501+00:00 | failed | 0/1 | 0 |
+| EXEC-e59e265d | 2026-06-30T16:23:19.794255+00:00 | failed | 0/1 | 1 |
+
+
+---
+_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_executions`. Last updated: 2026-07-01T07:13:31.677783+00:00._

@@ -1374,89 +1374,107 @@ pipeline_artifacts:
       test_id: TC-003
       title: 'Custom Lead intake form — Negative Path: Invalid Indian Mobile Format'
   test_scripts:
-    generated_at: '2026-07-01T06:13:01.980030+00:00'
+    generated_at: '2026-07-01T07:13:31.592058+00:00'
     generated_from: Standalone run — 1 user stories in 1 batch(es)
     test_cases:
     - assertions:
-      - New Account modal opens when New button is clicked from Accounts list view
+      - New Account modal opens when clicking the New button from Accounts list view
       - Standard Account fields (Account Name, Phone, Website, Type, Industry) are
         available for entry in the form
-      - Account record is created with entered values when all fields are completed
-        and Save is clicked
-      - User is navigated to newly created Account record page showing the entered
-        Account Name
-      estimated_duration_minutes: 3
-      generated_at: '2026-06-30T16:12:18.231522+00:00'
+      - Account record is successfully created when all required and standard fields
+        are completed with valid values
+      - User is navigated to the newly created Account record page showing the entered
+        Account Name and all field values
+      estimated_duration_minutes: 4
+      generated_at: '2026-07-01T07:13:31.592306+00:00'
       linked_story: US-02
-      pass_criteria: Account record is successfully created with all entered values
-        and user is on the Account detail page
+      pass_criteria: New Account modal opens correctly, all standard fields are available
+        and functional, Account record is created successfully with entered values,
+        and user is navigated to the Account detail page displaying all entered information
       persona: Account Executive
       preconditions:
         app: Sales
-        test_data: []
-        user_profile: Standard User with Account create permissions
+        test_data:
+        - Standard Account object with Name, Phone, Website, Type, and Industry fields
+          available
+        user_profile: Standard User with Account object create permissions
       steps:
       - action: click
-        detail: Click the App Launcher (9-dot waffle icon) in the top-left corner
-        expected: App Launcher menu opens showing available apps and items
+        detail: Click the App Launcher (9-dot grid) in the top-left corner
+        expected: App Launcher menu opens
         step: 1
-        target: App Launcher
+        target: App Launcher (9-dot grid icon)
       - action: click
-        detail: Click on Accounts in the App Launcher to navigate to the Accounts
-          tab
-        expected: Accounts list view page loads showing existing Account records
+        detail: Click on 'Accounts' in the App Launcher menu
+        expected: Accounts list view page loads
         step: 2
         target: Accounts
       - action: click
-        detail: Click the New button on the Accounts list view page
-        expected: New Account modal opens with the standard Account creation form
+        detail: Click the 'New' button on the Accounts list view
+        expected: New Account modal opens displaying the Account creation form
         step: 3
-        target: New button (button[name="New"])
-      - action: fill
-        data: Tech Solutions Inc
-        detail: Click in the Account Name field and enter 'Tech Solutions Inc'
-        expected: Account Name field displays 'Tech Solutions Inc'
+        target: New button (button[name="New"], a[title="New"])
+      - action: verify
+        detail: Verify that the Account Name, Phone, Website, Type and Industry fields
+          are visible in the form
+        expected: Account Name, Phone, Website, Type and Industry fields are displayed
+          and available for entry
         step: 4
+        target: New Account form fields
+      - action: fill
+        data: Global Tech Solutions
+        detail: Click in the Account Name field and type 'Global Tech Solutions'
+        expected: Account Name field displays 'Global Tech Solutions'
+        step: 5
         target: Account Name field (input[name="Name"])
       - action: fill
         data: (555) 123-4567
-        detail: Click in the Phone field and enter '(555) 123-4567'
+        detail: Click in the Phone field and type '(555) 123-4567'
         expected: Phone field displays '(555) 123-4567'
-        step: 5
+        step: 6
         target: Phone field (input[name="Phone"])
       - action: fill
-        data: https://techsolutions.com
-        detail: Click in the Website field and enter 'https://techsolutions.com'
-        expected: Website field displays 'https://techsolutions.com'
-        step: 6
+        data: https://www.globaltechsolutions.com
+        detail: Click in the Website field and type 'https://www.globaltechsolutions.com'
+        expected: Website field displays 'https://www.globaltechsolutions.com'
+        step: 7
         target: Website field (input[name="Website"])
       - action: select_picklist
         detail: Click the Type picklist and select 'Customer - Direct'
         expected: Type field shows 'Customer - Direct'
-        step: 7
+        step: 8
         target: Type picklist (button[role="combobox"][aria-label="Type"])
         value: Customer - Direct
       - action: select_picklist
         detail: Click the Industry picklist and select 'Technology'
         expected: Industry field shows 'Technology'
-        step: 8
+        step: 9
         target: Industry picklist (button[role="combobox"][aria-label="Industry"])
         value: Technology
       - action: click
         detail: Click the Save button to create the Account record
         expected: Account record is created and user is navigated to the Account detail
-          page showing 'Tech Solutions Inc' in the page header
-        step: 9
+          page
+        step: 10
         target: Save button (button[name="SaveEdit"])
       - action: verify
-        detail: Verify the success toast notification appears
-        expected: Account "Tech Solutions Inc" was created.
-        step: 10
-        target: Account "Tech Solutions Inc" was created.
+        detail: Verify that the Account detail page shows the Account Name 'Global
+          Tech Solutions' in the page header
+        expected: Account detail page header displays 'Global Tech Solutions'
+        step: 11
+        target: Account record page header
+      - action: verify
+        detail: 'Verify that the Account record shows all entered values: Phone ''(555)
+          123-4567'', Website ''https://www.globaltechsolutions.com'', Type ''Customer
+          - Direct'', and Industry ''Technology'''
+        expected: 'Account record displays Phone: (555) 123-4567, Website: https://www.globaltechsolutions.com,
+          Type: Customer - Direct, Industry: Technology'
+        step: 12
+        target: Account record details
       story_snapshot: 2fc00fb3918edc4c
       surface: internal_lightning
       test_id: TC-002
-      title: Create Account record with standard fields — Happy Path
+      title: Create Account record with standard fields - Happy Path
       user_story: As an Account Executive, I want to create a new Account record using
         Salesforce's standard Account creation form so that I can capture a customer
         organization's core details (name, type, industry, phone, website) and maintain
@@ -1851,4 +1869,4 @@ pipeline_artifacts:
     test_suite: Generated test suite — 1 user stories
     total_tests: 6
 schema_version: 1
-updated_at: '2026-07-01T06:14:53.596141+00:00'
+updated_at: '2026-07-01T07:13:31.603355+00:00'
