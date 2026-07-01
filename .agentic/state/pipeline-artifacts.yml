@@ -1374,7 +1374,7 @@ pipeline_artifacts:
       test_id: TC-003
       title: 'Custom Lead intake form — Negative Path: Invalid Indian Mobile Format'
   test_scripts:
-    generated_at: '2026-06-30T16:12:18.231097+00:00'
+    generated_at: '2026-07-01T06:13:01.980030+00:00'
     generated_from: Standalone run — 1 user stories in 1 batch(es)
     test_cases:
     - assertions:
@@ -1848,7 +1848,85 @@ pipeline_artifacts:
       user_story: As a sales representative, I want to use a simplified Lead intake
         form with only essential fields and Indian mobile validation, so that I can
         quickly capture leads without navigating numerous optional fields.
+    - assertions:
+      - Invalid Indian mobile number triggers validation error
+      - Form submission is blocked when Indian mobile validation fails
+      - Lead record is NOT created with invalid mobile number
+      - User remains on the New Lead form to correct the error
+      estimated_duration_minutes: 3
+      generated_at: '2026-07-01T06:13:01.980257+00:00'
+      linked_story: US-001
+      pass_criteria: Invalid Indian mobile number is rejected with validation error
+        and Lead is not created
+      persona: AE
+      preconditions:
+        app: Sales
+        test_data:
+        - Custom Lead intake form exists with Indian mobile validation
+        user_profile: AE
+      steps:
+      - action: click
+        detail: Click the 9-dot App Launcher icon in the top-left corner
+        expected: App Launcher menu opens
+        step: 1
+        target: App Launcher
+      - action: click
+        detail: Click on Leads in the App Launcher menu
+        expected: Leads list view page opens
+        step: 2
+        target: Leads
+      - action: click
+        detail: Click the New button to create a new Lead
+        expected: New Lead form opens
+        step: 3
+        target: New button (button[name="New"])
+      - action: fill
+        data: Raj
+        detail: Click in the First Name field and type 'Raj'
+        expected: First Name field displays 'Raj'
+        step: 4
+        target: First Name (input[placeholder="First Name"])
+      - action: fill
+        data: Sharma
+        detail: Click in the Last Name field and type 'Sharma'
+        expected: Last Name field displays 'Sharma'
+        step: 5
+        target: Last Name (input[placeholder="Last Name"])
+      - action: fill
+        data: Test Company India
+        detail: Click in the Company field and type 'Test Company India'
+        expected: Company field displays 'Test Company India'
+        step: 6
+        target: Company (input[name="Company"])
+      - action: fill
+        data: '123456789'
+        detail: Click in the Mobile field and type invalid Indian mobile number '123456789'
+        expected: Mobile field displays '123456789'
+        step: 7
+        target: Mobile (input[name="MobilePhone"])
+      - action: click
+        detail: Click the Save button to attempt to save the Lead
+        expected: Form remains open and validation error appears
+        step: 8
+        target: Save button (button[name="SaveEdit"])
+      - action: verify
+        detail: Verify that a validation error message appears for the invalid Indian
+          mobile number
+        expected: Validation error message is displayed indicating invalid Indian
+          mobile format
+        step: 9
+        target: Mobile field validation error
+      - action: verify
+        detail: Verify the New Lead form is still open and has not closed
+        expected: New Lead form remains open and no Lead detail page is shown
+        step: 10
+        target: Lead form still visible
+      story_snapshot: 4dd2e568b86ad232
+      surface: internal_lightning
+      test_id: TC-007
+      title: Invalid Indian mobile number rejected with validation error
+      user_story: As an AE I want a custom Lead intake form.
     test_suite: Generated test suite — 1 user stories
-    total_tests: 6
+    total_tests: 7
 schema_version: 1
-updated_at: '2026-06-30T16:25:00.822933+00:00'
+updated_at: '2026-07-01T06:13:01.986666+00:00'
