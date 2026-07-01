@@ -8,8 +8,7 @@
 | TC-001 | Custom Lead intake form — Happy Path | US-001 | 11 | 5 |
 | TC-003 | Custom Lead intake form — Negative Path: Invalid Indian Mobile Format | US-001 | 10 | 3 |
 | TC-004 | Custom Lead intake form — Edge Case: Required Field Validation | US-001 | 10 | 3 |
-| TC-007 | Invalid Indian mobile number rejected with validation error | US-001 | 10 | 4 |
 
 
 ---
-_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_scripts`. Last updated: 2026-07-01T06:13:02.061025+00:00._
+_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_scripts`. Last updated: 2026-07-01T06:14:53.649500+00:00._
