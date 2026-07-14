@@ -1032,5 +1032,456 @@ sandbox_prototypes:
   story_title: Create custom Lead intake form with Indian mobile validation
   target: salesforce
   title: Custom Lead Intake Form
+- comments: []
+  created_at: '2026-07-14T17:42:35.986561+00:00'
+  html: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\"\
+    >\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\
+    >\n    <title>Leads - Lightning Experience</title>\n    <style>\n        * {\n\
+    \            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n\
+    \        }\n\n        body {\n            font-family: \"Salesforce Sans\", \"\
+    SF Pro Text\", -apple-system, Arial, sans-serif;\n            background-color:\
+    \ #F3F3F3;\n            color: #181818;\n            font-size: 13px;\n      \
+    \      line-height: 1.4;\n            overflow-x: hidden;\n        }\n\n     \
+    \   /* Top Header Bar */\n        .header-bar {\n            height: 50px;\n \
+    \           background: #FFFFFF;\n            border-bottom: 1px solid #DDDBDA;\n\
+    \            display: flex;\n            align-items: center;\n            padding:\
+    \ 0 16px;\n            position: relative;\n            z-index: 1000;\n     \
+    \   }\n\n        .sf-logo {\n            width: 32px;\n            height: 24px;\n\
+    \            margin-right: 12px;\n        }\n\n        .app-switcher {\n     \
+    \       width: 20px;\n            height: 20px;\n            margin-right: 16px;\n\
+    \            cursor: pointer;\n        }\n\n        .app-name {\n            font-weight:\
+    \ 700;\n            font-size: 14px;\n            margin-right: 24px;\n      \
+    \  }\n\n        .global-search {\n            flex: 1;\n            max-width:\
+    \ 480px;\n            margin: 0 auto;\n            position: relative;\n     \
+    \   }\n\n        .search-input {\n            width: 100%;\n            height:\
+    \ 32px;\n            padding: 0 12px 0 36px;\n            border: 1px solid #C9C9C9;\n\
+    \            border-radius: 4px;\n            font-size: 13px;\n            background:\
+    \ #FFFFFF;\n        }\n\n        .search-icon {\n            position: absolute;\n\
+    \            left: 12px;\n            top: 50%;\n            transform: translateY(-50%);\n\
+    \            width: 16px;\n            height: 16px;\n            color: #706E6B;\n\
+    \        }\n\n        .header-actions {\n            display: flex;\n        \
+    \    align-items: center;\n            gap: 14px;\n            margin-left: 24px;\n\
+    \        }\n\n        .header-icon {\n            width: 20px;\n            height:\
+    \ 20px;\n            cursor: pointer;\n            color: #706E6B;\n        }\n\
+    \n        .notification-icon {\n            position: relative;\n        }\n\n\
+    \        .notification-badge {\n            position: absolute;\n            top:\
+    \ -4px;\n            right: -4px;\n            width: 8px;\n            height:\
+    \ 8px;\n            background: #BA0517;\n            border-radius: 50%;\n  \
+    \      }\n\n        .user-avatar {\n            width: 32px;\n            height:\
+    \ 32px;\n            border-radius: 50%;\n            background: #0176D3;\n \
+    \           color: white;\n            display: flex;\n            align-items:\
+    \ center;\n            justify-content: center;\n            font-weight: 600;\n\
+    \            font-size: 12px;\n            cursor: pointer;\n        }\n\n   \
+    \     /* App Navigation */\n        .app-nav {\n            height: 40px;\n  \
+    \          background: #FFFFFF;\n            border-bottom: 1px solid #DDDBDA;\n\
+    \            display: flex;\n            align-items: center;\n            padding:\
+    \ 0 16px;\n        }\n\n        .nav-tabs {\n            display: flex;\n    \
+    \        height: 100%;\n        }\n\n        .nav-tab {\n            padding:\
+    \ 0 12px;\n            height: 100%;\n            display: flex;\n           \
+    \ align-items: center;\n            cursor: pointer;\n            font-size: 13px;\n\
+    \            color: #181818;\n            text-decoration: none;\n           \
+    \ position: relative;\n            border-bottom: 3px solid transparent;\n   \
+    \     }\n\n        .nav-tab:hover {\n            background: #F3F3F3;\n      \
+    \  }\n\n        .nav-tab.active {\n            background: #F3F3F3;\n        \
+    \    border-bottom-color: #0176D3;\n            font-weight: 600;\n        }\n\
+    \n        /* Main Content */\n        .main-content {\n            padding: 16px;\n\
+    \            min-height: calc(100vh - 130px);\n        }\n\n        .page-header\
+    \ {\n            margin-bottom: 16px;\n        }\n\n        .breadcrumb {\n  \
+    \          font-size: 12px;\n            color: #706E6B;\n            margin-bottom:\
+    \ 8px;\n        }\n\n        .page-title {\n            font-size: 20px;\n   \
+    \         font-weight: 600;\n            color: #181818;\n            margin-bottom:\
+    \ 16px;\n        }\n\n        /* Action Bar */\n        .action-bar {\n      \
+    \      display: flex;\n            align-items: center;\n            justify-content:\
+    \ space-between;\n            margin-bottom: 16px;\n            padding: 12px\
+    \ 16px;\n            background: #FFFFFF;\n            border: 1px solid #DDDBDA;\n\
+    \            border-radius: 4px;\n        }\n\n        .action-buttons {\n   \
+    \         display: flex;\n            gap: 8px;\n        }\n\n        .btn {\n\
+    \            height: 32px;\n            padding: 0 16px;\n            border-radius:\
+    \ 4px;\n            font-size: 13px;\n            font-weight: 400;\n        \
+    \    cursor: pointer;\n            border: 1px solid;\n            display: inline-flex;\n\
+    \            align-items: center;\n            gap: 8px;\n            text-decoration:\
+    \ none;\n        }\n\n        .btn-brand {\n            background: #0176D3;\n\
+    \            color: #FFFFFF;\n            border-color: #0176D3;\n        }\n\n\
+    \        .btn-brand:hover {\n            background: #014486;\n            border-color:\
+    \ #014486;\n        }\n\n        .btn-neutral {\n            background: #FFFFFF;\n\
+    \            color: #0176D3;\n            border-color: #DDDBDA;\n        }\n\n\
+    \        .btn-neutral:hover {\n            background: #F3F3F3;\n        }\n\n\
+    \        /* Data Table */\n        .data-table {\n            background: #FFFFFF;\n\
+    \            border: 1px solid #DDDBDA;\n            border-radius: 4px;\n   \
+    \         overflow: hidden;\n        }\n\n        .table-header {\n          \
+    \  background: #FAFAFA;\n            border-bottom: 1px solid #DDDBDA;\n     \
+    \       padding: 0 16px;\n            height: 40px;\n            display: flex;\n\
+    \            align-items: center;\n            font-size: 11px;\n            font-weight:\
+    \ 700;\n            text-transform: uppercase;\n            color: #706E6B;\n\
+    \            letter-spacing: 0.0625em;\n        }\n\n        .table-body {\n \
+    \           max-height: 600px;\n            overflow-y: auto;\n        }\n\n \
+    \       .table-row {\n            padding: 0 16px;\n            height: 40px;\n\
+    \            display: grid;\n            grid-template-columns: 40px 1fr 1fr 1fr\
+    \ 120px 120px 40px;\n            align-items: center;\n            border-bottom:\
+    \ 1px solid #DDDBDA;\n            cursor: pointer;\n        }\n\n        .table-row:hover\
+    \ {\n            background: #F3F3F3;\n        }\n\n        .checkbox {\n    \
+    \        width: 16px;\n            height: 16px;\n        }\n\n        .record-link\
+    \ {\n            color: #0176D3;\n            text-decoration: none;\n       \
+    \     font-weight: 600;\n        }\n\n        .record-link:hover {\n         \
+    \   text-decoration: underline;\n        }\n\n        .status-badge {\n      \
+    \      padding: 2px 8px;\n            border-radius: 12px;\n            font-size:\
+    \ 11px;\n            font-weight: 700;\n            text-align: center;\n    \
+    \    }\n\n        .status-open {\n            background: #FFF3E2;\n         \
+    \   color: #FE9339;\n        }\n\n        .status-working {\n            background:\
+    \ #CCE9F9;\n            color: #0176D3;\n        }\n\n        .status-qualified\
+    \ {\n            background: #E0F4E5;\n            color: #2E844A;\n        }\n\
+    \n        /* Modal */\n        .modal-backdrop {\n            position: fixed;\n\
+    \            top: 0;\n            left: 0;\n            width: 100%;\n       \
+    \     height: 100%;\n            background: rgba(0, 0, 0, 0.5);\n           \
+    \ z-index: 2000;\n            display: none;\n            align-items: center;\n\
+    \            justify-content: center;\n        }\n\n        .modal {\n       \
+    \     background: #FFFFFF;\n            width: 90%;\n            max-width: 640px;\n\
+    \            border-radius: 4px;\n            box-shadow: 0 2px 4px rgba(0, 0,\
+    \ 0, 0.2);\n            max-height: 80vh;\n            overflow: hidden;\n   \
+    \         display: flex;\n            flex-direction: column;\n        }\n\n \
+    \       .modal-header {\n            padding: 16px 24px;\n            border-bottom:\
+    \ 1px solid #DDDBDA;\n            display: flex;\n            align-items: center;\n\
+    \            justify-content: space-between;\n        }\n\n        .modal-title\
+    \ {\n            font-size: 16px;\n            font-weight: 600;\n           \
+    \ color: #181818;\n        }\n\n        .modal-close {\n            width: 24px;\n\
+    \            height: 24px;\n            cursor: pointer;\n            color: #706E6B;\n\
+    \        }\n\n        .modal-body {\n            padding: 24px;\n            overflow-y:\
+    \ auto;\n            flex: 1;\n        }\n\n        .modal-footer {\n        \
+    \    padding: 16px 24px;\n            border-top: 1px solid #DDDBDA;\n       \
+    \     display: flex;\n            justify-content: flex-end;\n            gap:\
+    \ 12px;\n        }\n\n        /* Form */\n        .form-row {\n            margin-bottom:\
+    \ 16px;\n        }\n\n        .form-label {\n            display: block;\n   \
+    \         font-size: 12px;\n            color: #706E6B;\n            font-weight:\
+    \ 600;\n            margin-bottom: 4px;\n        }\n\n        .required {\n  \
+    \          color: #BA0517;\n        }\n\n        .form-input {\n            width:\
+    \ 100%;\n            height: 32px;\n            padding: 0 12px;\n           \
+    \ border: 1px solid #C9C9C9;\n            border-radius: 4px;\n            font-size:\
+    \ 13px;\n            background: #FFFFFF;\n        }\n\n        .form-input:focus\
+    \ {\n            outline: none;\n            border-color: #0176D3;\n        \
+    \    box-shadow: 0 0 0 2px rgba(1, 118, 211, 0.1);\n        }\n\n        .form-input.error\
+    \ {\n            border-color: #BA0517;\n            box-shadow: 0 0 0 2px rgba(186,\
+    \ 5, 23, 0.1);\n        }\n\n        .form-select {\n            width: 100%;\n\
+    \            height: 32px;\n            padding: 0 12px;\n            border:\
+    \ 1px solid #C9C9C9;\n            border-radius: 4px;\n            font-size:\
+    \ 13px;\n            background: #FFFFFF;\n            cursor: pointer;\n    \
+    \    }\n\n        .error-message {\n            font-size: 12px;\n           \
+    \ color: #BA0517;\n            margin-top: 4px;\n            display: none;\n\
+    \        }\n\n        .help-text {\n            font-size: 11px;\n           \
+    \ color: #706E6B;\n            margin-top: 4px;\n        }\n\n        /* Toast\
+    \ */\n        .toast {\n            position: fixed;\n            top: 80px;\n\
+    \            right: 16px;\n            background: #2E844A;\n            color:\
+    \ #FFFFFF;\n            padding: 12px 16px;\n            border-radius: 4px;\n\
+    \            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);\n            z-index: 3000;\n\
+    \            display: none;\n            align-items: center;\n            gap:\
+    \ 8px;\n            max-width: 400px;\n        }\n\n        .toast.error {\n \
+    \           background: #BA0517;\n        }\n\n        .toast-icon {\n       \
+    \     width: 16px;\n            height: 16px;\n        }\n\n        /* Utility\
+    \ Bar */\n        .utility-bar {\n            position: fixed;\n            bottom:\
+    \ 0;\n            left: 0;\n            width: 100%;\n            height: 40px;\n\
+    \            background: #514F4D;\n            display: flex;\n            align-items:\
+    \ center;\n            justify-content: space-between;\n            padding: 0\
+    \ 16px;\n            z-index: 1000;\n        }\n\n        .utility-icons {\n \
+    \           display: flex;\n            gap: 16px;\n        }\n\n        .utility-icon\
+    \ {\n            width: 20px;\n            height: 20px;\n            color: #FFFFFF;\n\
+    \            cursor: pointer;\n        }\n\n        .utility-help {\n        \
+    \    color: #FFFFFF;\n            text-decoration: none;\n            font-size:\
+    \ 13px;\n        }\n\n        .mobile-hint {\n            font-size: 11px;\n \
+    \           color: #706E6B;\n            margin-top: 2px;\n        }\n    </style>\n\
+    </head>\n<body>\n    <!-- Top Header Bar -->\n    <div class=\"header-bar\">\n\
+    \        <svg class=\"sf-logo\" viewBox=\"0 0 32 24\" fill=\"none\">\n       \
+    \     <defs>\n                <linearGradient id=\"sfGradient\" x1=\"0%\" y1=\"\
+    0%\" x2=\"100%\" y2=\"100%\">\n                    <stop offset=\"0%\" style=\"\
+    stop-color:#1B96FF\"/>\n                    <stop offset=\"100%\" style=\"stop-color:#BA0517\"\
+    />\n                </linearGradient>\n            </defs>\n            <path\
+    \ d=\"M8 4C8 1.8 9.8 0 12 0C14.2 0 16 1.8 16 4C18.2 4 20 5.8 20 8C20 10.2 18.2\
+    \ 12 16 12H8C5.8 12 4 10.2 4 8C4 5.8 5.8 4 8 4Z\" fill=\"url(#sfGradient)\"/>\n\
+    \            <path d=\"M20 16C20 13.8 21.8 12 24 12C26.2 12 28 13.8 28 16C28 18.2\
+    \ 26.2 20 24 20H12C9.8 20 8 18.2 8 16C8 15.4 8.2 14.8 8.4 14.4\" fill=\"url(#sfGradient)\"\
+    \ opacity=\"0.8\"/>\n        </svg>\n        \n        <svg class=\"app-switcher\"\
+    \ viewBox=\"0 0 20 20\" fill=\"#706E6B\">\n            <circle cx=\"3\" cy=\"\
+    3\" r=\"1.5\"/>\n            <circle cx=\"10\" cy=\"3\" r=\"1.5\"/>\n        \
+    \    <circle cx=\"17\" cy=\"3\" r=\"1.5\"/>\n            <circle cx=\"3\" cy=\"\
+    10\" r=\"1.5\"/>\n            <circle cx=\"10\" cy=\"10\" r=\"1.5\"/>\n      \
+    \      <circle cx=\"17\" cy=\"10\" r=\"1.5\"/>\n            <circle cx=\"3\" cy=\"\
+    17\" r=\"1.5\"/>\n            <circle cx=\"10\" cy=\"17\" r=\"1.5\"/>\n      \
+    \      <circle cx=\"17\" cy=\"17\" r=\"1.5\"/>\n        </svg>\n        \n   \
+    \     <div class=\"app-name\">Sales</div>\n        \n        <div class=\"global-search\"\
+    >\n            <svg class=\"search-icon\" viewBox=\"0 0 16 16\" fill=\"currentColor\"\
+    >\n                <path d=\"M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85\
+    \ 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5\
+    \ 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z\"/>\n            </svg>\n            <input\
+    \ type=\"text\" class=\"search-input\" placeholder=\"Search Salesforce...\">\n\
+    \        </div>\n        \n        <div class=\"header-actions\">\n          \
+    \  <svg class=\"header-icon\" viewBox=\"0 0 20 20\" fill=\"currentColor\">\n \
+    \               <path d=\"M10 2L3 9h2v5h2v-4h6v4h2V9h2l-7-7z\"/>\n           \
+    \ </svg>\n            <svg class=\"header-icon\" viewBox=\"0 0 20 20\" fill=\"\
+    currentColor\">\n                <circle cx=\"10\" cy=\"10\" r=\"8\"/>\n     \
+    \           <path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"/>\n             \
+    \   <circle cx=\"10\" cy=\"15.02\" r=\"0.5\"/>\n            </svg>\n         \
+    \   <div class=\"notification-icon\">\n                <svg class=\"header-icon\"\
+    \ viewBox=\"0 0 20 20\" fill=\"currentColor\">\n                    <path d=\"\
+    M10 2a6 6 0 0 0-6 6c0 1.887-.454 3.665-1.257 5.234a.75.75 0 0 0 .515 1.076A9.06\
+    \ 9.06 0 0 0 5.25 14.5h9.5c.41 0 .82-.024 1.227-.072a.75.75 0 0 0 .515-1.076A11.717\
+    \ 11.717 0 0 1 16 8a6 6 0 0 0-6-6zM8.05 16.25a2 2 0 0 0 3.9 0H8.05z\"/>\n    \
+    \            </svg>\n                <div class=\"notification-badge\"></div>\n\
+    \            </div>\n            <div class=\"user-avatar\">JD</div>\n       \
+    \ </div>\n    </div>\n\n    <!-- App Navigation -->\n    <div class=\"app-nav\"\
+    >\n        <div class=\"nav-tabs\">\n            <a href=\"#\" class=\"nav-tab\"\
+    >Home</a>\n            <a href=\"#\" class=\"nav-tab active\">Leads</a>\n    \
+    \        <a href=\"#\" class=\"nav-tab\">Accounts</a>\n            <a href=\"\
+    #\" class=\"nav-tab\">Contacts</a>\n            <a href=\"#\" class=\"nav-tab\"\
+    >Opportunities</a>\n            <a href=\"#\" class=\"nav-tab\">Cases</a>\n  \
+    \          <a href=\"#\" class=\"nav-tab\">Reports</a>\n            <a href=\"\
+    #\" class=\"nav-tab\">Dashboards</a>\n        </div>\n    </div>\n\n    <!-- Main\
+    \ Content -->\n    <div class=\"main-content\">\n        <div class=\"page-header\"\
+    >\n            <div class=\"breadcrumb\">Home > Leads</div>\n            <div\
+    \ class=\"page-title\">Leads</div>\n        </div>\n\n        <!-- Action Bar\
+    \ -->\n        <div class=\"action-bar\">\n            <div class=\"action-buttons\"\
+    >\n                <button class=\"btn btn-brand\" onclick=\"openLeadForm()\"\
+    >\n                    <svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"\
+    currentColor\">\n                        <path d=\"M8 3a1 1 0 0 1 1 1v3h3a1 1\
+    \ 0 1 1 0 2H9v3a1 1 0 1 1-2 0V9H4a1 1 0 1 1 0-2h3V4a1 1 0 0 1 1-1z\"/>\n     \
+    \               </svg>\n                    New\n                </button>\n \
+    \               <button class=\"btn btn-neutral\">Import</button>\n          \
+    \      <button class=\"btn btn-neutral\">Export</button>\n            </div>\n\
+    \            <div>\n                <button class=\"btn btn-neutral\">\n     \
+    \               <svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"\
+    currentColor\">\n                        <path d=\"M1.5 8a6.5 6.5 0 1 1 13 0 6.5\
+    \ 6.5 0 0 1-13 0zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM6.364 4.5a.5.5 0 0 1 .5-.5h2.272a.5.5\
+    \ 0 0 1 0 1H7.5v5.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5\
+    \ 0 1 1 .708-.708L6.5 10.293V4.5z\"/>\n                    </svg>\n          \
+    \          Refresh\n                </button>\n            </div>\n        </div>\n\
+    \n        <!-- Data Table -->\n        <div class=\"data-table\">\n          \
+    \  <div class=\"table-header\">\n                <div style=\"width: 40px;\"></div>\n\
+    \                <div>Lead Name</div>\n                <div>Company</div>\n  \
+    \              <div>Email</div>\n                <div>Mobile</div>\n         \
+    \       <div>Lead Status</div>\n                <div style=\"width: 40px;\"></div>\n\
+    \            </div>\n            <div class=\"table-body\" id=\"leadsTableBody\"\
+    >\n                <div class=\"table-row\" onclick=\"viewLead('Rajesh Kumar')\"\
+    >\n                    <input type=\"checkbox\" class=\"checkbox\">\n        \
+    \            <a href=\"#\" class=\"record-link\">Rajesh Kumar</a>\n          \
+    \          <span>Tata Consultancy Services</span>\n                    <span>rajesh.kumar@tcs.com</span>\n\
+    \                    <span>+91 98765 43210</span>\n                    <span class=\"\
+    status-badge status-open\">Open - Not Contacted</span>\n                    <svg\
+    \ width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"#706E6B\">\n       \
+    \                 <circle cx=\"8\" cy=\"4\" r=\"1\"/>\n                      \
+    \  <circle cx=\"8\" cy=\"8\" r=\"1\"/>\n                        <circle cx=\"\
+    8\" cy=\"12\" r=\"1\"/>\n                    </svg>\n                </div>\n\
+    \                <div class=\"table-row\" onclick=\"viewLead('Priya Sharma')\"\
+    >\n                    <input type=\"checkbox\" class=\"checkbox\">\n        \
+    \            <a href=\"#\" class=\"record-link\">Priya Sharma</a>\n          \
+    \          <span>Infosys Limited</span>\n                    <span>priya.sharma@infosys.com</span>\n\
+    \                    <span>+91 87654 32109</span>\n                    <span class=\"\
+    status-badge status-working\">Working - Contacted</span>\n                   \
+    \ <svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"#706E6B\">\n  \
+    \                      <circle cx=\"8\" cy=\"4\" r=\"1\"/>\n                 \
+    \       <circle cx=\"8\" cy=\"8\" r=\"1\"/>\n                        <circle cx=\"\
+    8\" cy=\"12\" r=\"1\"/>\n                    </svg>\n                </div>\n\
+    \                <div class=\"table-row\" onclick=\"viewLead('Amit Patel')\">\n\
+    \                    <input type=\"checkbox\" class=\"checkbox\">\n          \
+    \          <a href=\"#\" class=\"record-link\">Amit Patel</a>\n              \
+    \      <span>Reliance Industries</span>\n                    <span>amit.patel@ril.com</span>\n\
+    \                    <span>+91 76543 21098</span>\n                    <span class=\"\
+    status-badge status-qualified\">Qualified</span>\n                    <svg width=\"\
+    16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"#706E6B\">\n                 \
+    \       <circle cx=\"8\" cy=\"4\" r=\"1\"/>\n                        <circle cx=\"\
+    8\" cy=\"8\" r=\"1\"/>\n                        <circle cx=\"8\" cy=\"12\" r=\"\
+    1\"/>\n                    </svg>\n                </div>\n                <div\
+    \ class=\"table-row\" onclick=\"viewLead('Sneha Reddy')\">\n                 \
+    \   <input type=\"checkbox\" class=\"checkbox\">\n                    <a href=\"\
+    #\" class=\"record-link\">Sneha Reddy</a>\n                    <span>Wipro Technologies</span>\n\
+    \                    <span>sneha.reddy@wipro.com</span>\n                    <span>+91\
+    \ 65432 10987</span>\n                    <span class=\"status-badge status-working\"\
+    >Working - Contacted</span>\n                    <svg width=\"16\" height=\"16\"\
+    \ viewBox=\"0 0 16 16\" fill=\"#706E6B\">\n                        <circle cx=\"\
+    8\" cy=\"4\" r=\"1\"/>\n                        <circle cx=\"8\" cy=\"8\" r=\"\
+    1\"/>\n                        <circle cx=\"8\" cy=\"12\" r=\"1\"/>\n        \
+    \            </svg>\n                </div>\n                <div class=\"table-row\"\
+    \ onclick=\"viewLead('Vikram Singh')\">\n                    <input type=\"checkbox\"\
+    \ class=\"checkbox\">\n                    <a href=\"#\" class=\"record-link\"\
+    >Vikram Singh</a>\n                    <span>HDFC Bank</span>\n              \
+    \      <span>vikram.singh@hdfcbank.com</span>\n                    <span>+91 54321\
+    \ 09876</span>\n                    <span class=\"status-badge status-open\">Open\
+    \ - Not Contacted</span>\n                    <svg width=\"16\" height=\"16\"\
+    \ viewBox=\"0 0 16 16\" fill=\"#706E6B\">\n                        <circle cx=\"\
+    8\" cy=\"4\" r=\"1\"/>\n                        <circle cx=\"8\" cy=\"8\" r=\"\
+    1\"/>\n                        <circle cx=\"8\" cy=\"12\" r=\"1\"/>\n        \
+    \            </svg>\n                </div>\n            </div>\n        </div>\n\
+    \    </div>\n\n    <!-- New Lead Modal -->\n    <div class=\"modal-backdrop\"\
+    \ id=\"leadModal\">\n        <div class=\"modal\">\n            <div class=\"\
+    modal-header\">\n                <h2 class=\"modal-title\">New Lead</h2>\n   \
+    \             <svg class=\"modal-close\" onclick=\"closeLeadForm()\" viewBox=\"\
+    0 0 24 24\" fill=\"currentColor\">\n                    <path d=\"M18 6L6 18M6\
+    \ 6l12 12\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"\
+    />\n                </svg>\n            </div>\n            <div class=\"modal-body\"\
+    >\n                <form id=\"leadForm\" onsubmit=\"saveLead(event)\">\n     \
+    \               <div class=\"form-row\">\n                        <label class=\"\
+    form-label\">\n                            First Name <span class=\"required\"\
+    >*</span>\n                        </label>\n                        <input type=\"\
+    text\" class=\"form-input\" id=\"firstName\" name=\"firstName\" required>\n  \
+    \                      <div class=\"error-message\" id=\"firstNameError\">First\
+    \ Name is required</div>\n                    </div>\n\n                    <div\
+    \ class=\"form-row\">\n                        <label class=\"form-label\">\n\
+    \                            Last Name <span class=\"required\">*</span>\n   \
+    \                     </label>\n                        <input type=\"text\" class=\"\
+    form-input\" id=\"lastName\" name=\"lastName\" required>\n                   \
+    \     <div class=\"error-message\" id=\"lastNameError\">Last Name is required</div>\n\
+    \                    </div>\n\n                    <div class=\"form-row\">\n\
+    \                        <label class=\"form-label\">\n                      \
+    \      Mobile <span class=\"required\">*</span>\n                        </label>\n\
+    \                        <input type=\"text\" class=\"form-input\" id=\"mobile\"\
+    \ name=\"mobile\" placeholder=\"+91 XXXXX XXXXX\" required>\n                \
+    \        <div class=\"mobile-hint\">Format: +91 followed by 10 digits (e.g., +91\
+    \ 98765 43210)</div>\n                        <div class=\"error-message\" id=\"\
+    mobileError\">Please enter a valid Indian mobile number (+91 followed by 10 digits)</div>\n\
+    \                    </div>\n\n                    <div class=\"form-row\">\n\
+    \                        <label class=\"form-label\">\n                      \
+    \      Email <span class=\"required\">*</span>\n                        </label>\n\
+    \                        <input type=\"email\" class=\"form-input\" id=\"email\"\
+    \ name=\"email\" required>\n                        <div class=\"error-message\"\
+    \ id=\"emailError\">Please enter a valid email address</div>\n               \
+    \     </div>\n\n                    <div class=\"form-row\">\n               \
+    \         <label class=\"form-label\">\n                            Lead Source\
+    \ <span class=\"required\">*</span>\n                        </label>\n      \
+    \                  <select class=\"form-select\" id=\"leadSource\" name=\"leadSource\"\
+    \ required>\n                            <option value=\"\">--None--</option>\n\
+    \                            <option value=\"Web\">Web</option>\n            \
+    \                <option value=\"Phone Inquiry\">Phone Inquiry</option>\n    \
+    \                        <option value=\"Partner Referral\">Partner Referral</option>\n\
+    \                            <option value=\"Purchased List\">Purchased List</option>\n\
+    \                            <option value=\"Other\">Other</option>\n        \
+    \                </select>\n                        <div class=\"error-message\"\
+    \ id=\"leadSourceError\">Lead Source is required</div>\n                    </div>\n\
+    \                </form>\n            </div>\n            <div class=\"modal-footer\"\
+    >\n                <button type=\"button\" class=\"btn btn-neutral\" onclick=\"\
+    closeLeadForm()\">Cancel</button>\n                <button type=\"submit\" form=\"\
+    leadForm\" class=\"btn btn-brand\">Save</button>\n            </div>\n       \
+    \ </div>\n    </div>\n\n    <!-- Toast Notification -->\n    <div class=\"toast\"\
+    \ id=\"toast\">\n        <svg class=\"toast-icon\" viewBox=\"0 0 16 16\" fill=\"\
+    currentColor\">\n            <path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8\
+    \ 8 0 1 0 8 0a8 8 0 0 0 0 16z\"/>\n            <path d=\"m10.97 4.97-.02.022-3.473\
+    \ 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75\
+    \ 0 0 0-1.071-1.05z\"/>\n        </svg>\n        <span id=\"toastMessage\"></span>\n\
+    \    </div>\n\n    <!-- Utility Bar -->\n    <div class=\"utility-bar\">\n   \
+    \     <div class=\"utility-icons\">\n            <svg class=\"utility-icon\" viewBox=\"\
+    0 0 20 20\" fill=\"currentColor\">\n                <path d=\"M2 3a1 1 0 011-1h2.153a1\
+    \ 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105\
+    \ 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82\
+    \ 18 2 12.18 2 5V3z\"/>\n            </svg>\n            <svg class=\"utility-icon\"\
+    \ viewBox=\"0 0 20 20\" fill=\"currentColor\">\n                <path d=\"M2 5a2\
+    \ 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z\"/>\n   \
+    \             <path d=\"M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3\
+    \ 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z\"/>\n            </svg>\n            <svg\
+    \ class=\"utility-icon\" viewBox=\"0 0 20 20\" fill=\"currentColor\">\n      \
+    \          <path d=\"M10 12a2 2 0 100-4 2 2 0 000 4z\"/>\n                <path\
+    \ fillRule=\"evenodd\" d=\"M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542\
+    \ 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0\
+    \ 018 0z\"/>\n            </svg>\n        </div>\n        <a href=\"#\" class=\"\
+    utility-help\">Help</a>\n    </div>\n\n    <script>\n        // Indian mobile\
+    \ number validation\n        function validateIndianMobile(mobile) {\n       \
+    \     // Remove all spaces and check format\n            const cleanMobile = mobile.replace(/\\\
+    s/g, '');\n            const pattern = /^\\+91[6-9]\\d{9}$/;\n            return\
+    \ pattern.test(cleanMobile);\n        }\n\n        // Email validation\n     \
+    \   function validateEmail(email) {\n            const pattern = /^[^\\s@]+@[^\\\
+    s@]+\\.[^\\s@]+$/;\n            return pattern.test(email);\n        }\n\n   \
+    \     // Show error for field\n        function showFieldError(fieldId, show =\
+    \ true) {\n            const field = document.getElementById(fieldId);\n     \
+    \       const error = document.getElementById(fieldId + 'Error');\n          \
+    \  \n            if (show) {\n                field.classList.add('error');\n\
+    \                error.style.display = 'block';\n            } else {\n      \
+    \          field.classList.remove('error');\n                error.style.display\
+    \ = 'none';\n            }\n        }\n\n        // Format mobile number as user\
+    \ types\n        document.getElementById('mobile').addEventListener('input', function(e)\
+    \ {\n            let value = e.target.value.replace(/\\D/g, ''); // Remove non-digits\n\
+    \            \n            if (value.startsWith('91') && !e.target.value.startsWith('+91'))\
+    \ {\n                value = '+91 ' + value.substring(2);\n            } else\
+    \ if (value.length > 0 && !e.target.value.startsWith('+91')) {\n             \
+    \   value = '+91 ' + value;\n            }\n            \n            // Format\
+    \ as +91 XXXXX XXXXX\n            if (value.length > 3) {\n                const\
+    \ cleanValue = value.replace(/\\+91\\s?/, '');\n                if (cleanValue.length\
+    \ <= 10) {\n                    const formatted = cleanValue.replace(/(\\d{5})(\\\
+    d{0,5})/, '$1 $2').trim();\n                    e.target.value = '+91 ' + formatted;\n\
+    \                }\n            } else {\n                e.target.value = value;\n\
+    \            }\n            \n            // Validate on input\n            if\
+    \ (e.target.value.length > 4) {\n                const isValid = validateIndianMobile(e.target.value);\n\
+    \                showFieldError('mobile', !isValid);\n            }\n        });\n\
+    \n        // Real-time validation\n        document.getElementById('firstName').addEventListener('blur',\
+    \ function() {\n            showFieldError('firstName', !this.value.trim());\n\
+    \        });\n\n        document.getElementById('lastName').addEventListener('blur',\
+    \ function() {\n            showFieldError('lastName', !this.value.trim());\n\
+    \        });\n\n        document.getElementById('email').addEventListener('blur',\
+    \ function() {\n            const isValid = this.value && validateEmail(this.value);\n\
+    \            showFieldError('email', !isValid);\n        });\n\n        document.getElementById('leadSource').addEventListener('change',\
+    \ function() {\n            showFieldError('leadSource', !this.value);\n     \
+    \   });\n\n        // Clear errors on focus\n        ['firstName', 'lastName',\
+    \ 'mobile', 'email', 'leadSource'].forEach(fieldId => {\n            document.getElementById(fieldId).addEventListener('focus',\
+    \ function() {\n                showFieldError(fieldId, false);\n            });\n\
+    \        });\n\n        function openLeadForm() {\n            document.getElementById('leadModal').style.display\
+    \ = 'flex';\n            // Reset form\n            document.getElementById('leadForm').reset();\n\
+    \            // Clear all errors\n            ['firstName', 'lastName', 'mobile',\
+    \ 'email', 'leadSource'].forEach(fieldId => {\n                showFieldError(fieldId,\
+    \ false);\n            });\n        }\n\n        function closeLeadForm() {\n\
+    \            document.getElementById('leadModal').style.display = 'none';\n  \
+    \      }\n\n        function showToast(message, isError = false) {\n         \
+    \   const toast = document.getElementById('toast');\n            const toastMessage\
+    \ = document.getElementById('toastMessage');\n            \n            toast.className\
+    \ = 'toast' + (isError ? ' error' : '');\n            toastMessage.textContent\
+    \ = message;\n            toast.style.display = 'flex';\n            \n      \
+    \      setTimeout(() => {\n                toast.style.display = 'none';\n   \
+    \         }, 3000);\n        }\n\n        function saveLead(event) {\n       \
+    \     event.preventDefault();\n            \n            // Get form values\n\
+    \            const firstName = document.getElementById('firstName').value.trim();\n\
+    \            const lastName = document.getElementById('lastName').value.trim();\n\
+    \            const mobile = document.getElementById('mobile').value.trim();\n\
+    \            const email = document.getElementById('email').value.trim();\n  \
+    \          const leadSource = document.getElementById('leadSource').value;\n \
+    \           \n            let hasErrors = false;\n            \n            //\
+    \ Validate all fields\n            if (!firstName) {\n                showFieldError('firstName',\
+    \ true);\n                hasErrors = true;\n            }\n            \n   \
+    \         if (!lastName) {\n                showFieldError('lastName', true);\n\
+    \                hasErrors = true;\n            }\n            \n            if\
+    \ (!mobile || !validateIndianMobile(mobile)) {\n                showFieldError('mobile',\
+    \ true);\n                hasErrors = true;\n            }\n            \n   \
+    \         if (!email || !validateEmail(email)) {\n                showFieldError('email',\
+    \ true);\n                hasErrors = true;\n            }\n            \n   \
+    \         if (!leadSource) {\n                showFieldError('leadSource', true);\n\
+    \                hasErrors = true;\n            }\n            \n            if\
+    \ (hasErrors) {\n                showToast('Please correct the errors and try\
+    \ again.', true);\n                return;\n            }\n            \n    \
+    \        // Simulate saving lead\n            setTimeout(() => {\n           \
+    \     // Add new lead to table\n                const tableBody = document.getElementById('leadsTableBody');\n\
+    \                const newRow = document.createElement('div');\n             \
+    \   newRow.className = 'table-row';\n                newRow.onclick = () => viewLead(firstName\
+    \ + ' ' + lastName);\n                \n                newRow.innerHTML = `\n\
+    \                    <input type=\"checkbox\" class=\"checkbox\">\n          \
+    \          <a href=\"#\" class=\"record-link\">${firstName} ${lastName}</a>\n\
+    \                    <span>New Company</span>\n                    <span>${email}</span>\n\
+    \                    <span>${mobile}</span>\n                    <span class=\"\
+    status-badge status-open\">Open - Not Contacted</span>\n                    <svg\
+    \ width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"#706E6B\">\n       \
+    \                 <circle cx=\"8\" cy=\"4\" r=\"1\"/>\n                      \
+    \  <circle cx=\"8\" cy=\"8\" r=\"1\"/>\n                        <circle cx=\"\
+    8\" cy=\"12\" r=\"1\"/>\n                    </svg>\n                `;\n    \
+    \            \n                tableBody.insertBefore(newRow, tableBody.firstChild);\n\
+    \                \n                closeLeadForm();\n                showToast(`Lead\
+    \ \"${firstName} ${lastName}\" was created successfully.`);\n                \n\
+    \                // Simulate navigation to lead record after 1.5 seconds\n   \
+    \             setTimeout(() => {\n                    showToast('Navigating to\
+    \ lead record...', false);\n                }, 1500);\n                \n    \
+    \        }, 500);\n        }\n\n        function viewLead(leadName) {\n      \
+    \      showToast(`Opening ${leadName} record...`);\n        }\n\n        // Close\
+    \ modal on backdrop click\n        document.getElementById('leadModal').addEventListener('click',\
+    \ function(e) {\n            if (e.target === this) {\n                closeLeadForm();\n\
+    \            }\n        });\n\n        // Close modal on Escape key\n        document.addEventListener('keydown',\
+    \ function(e) {\n            if (e.key === 'Escape' && document.getElementById('leadModal').style.display\
+    \ === 'flex') {\n                closeLeadForm();\n            }\n        });\n\
+    \    </script>\n</body>\n</html>"
+  id: 9bb9f456
+  status: generated
+  story_id: US-001
+  story_text: ''
+  story_title: Create custom Lead intake form with Indian mobile validation
+  target: salesforce
+  title: Lead Intake Form with Indian Mobile Validation
 schema_version: 1
-updated_at: '2026-07-14T17:41:44.871742+00:00'
+updated_at: '2026-07-14T17:42:36.040675+00:00'

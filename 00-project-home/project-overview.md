@@ -9,8 +9,8 @@ _Created: 2026-06-29T06:17:35.446926+00:00_
 | Documents uploaded | 0 |
 | Decisions logged | 0 |
 | Pipeline runs | 0 |
-| Sandbox prototypes | 2 |
+| Sandbox prototypes | 3 |
 
 
 ---
-_Auto-generated from in-app state. Source field: `project_name + extracted_profile + tab_badges`. Last updated: 2026-07-14T17:41:44.911198+00:00._
+_Auto-generated from in-app state. Source field: `project_name + extracted_profile + tab_badges`. Last updated: 2026-07-14T17:42:36.094276+00:00._
