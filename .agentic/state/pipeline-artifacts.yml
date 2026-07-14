@@ -2246,6 +2246,503 @@ pipeline_artifacts:
         navigated to the newly created Lead record page showing all entered values.'
       test_id: TC-001
       title: Custom Lead intake form — Happy Path
+  - aborted: false
+    completed_at: '2026-07-14T17:49:32.557386+00:00'
+    defects: []
+    executed_by: 'Test Execution Agent — '
+    execution_id: EXEC-9dc3bdf4
+    org_url: https://login.salesforce.com
+    started_at: '2026-07-14T17:43:05.020464+00:00'
+    summary:
+      failed: 0
+      pass_rate: 100%
+      passed: 3
+      skipped: 0
+      total: 3
+    test_results:
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 189.2
+      executor: mcp
+      failure_detail: null
+      linked_story: US-02
+      persona: Default
+      screenshot: null
+      skipped: false
+      status: passed
+      step_results:
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to Main Co"
+        elapsed_seconds: 11.0
+        purpose: Click the App Launcher (9-dot grid icon)
+        status: passed
+        step: 1
+        target: e17
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/list\n\
+          page_title: Lightning Experience | Salesforce\nelements:\n  e1: <a> 'Skip\
+          \ to Navigation'\n  e2:"
+        elapsed_seconds: 18.0
+        purpose: Click on Accounts in the navigation
+        status: passed
+        step: 2
+        target: e36
+      - action: click
+        detail: 'Clicked successfully
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VIEW&uid=178405103613743850'
+        elapsed_seconds: 30.2
+        purpose: Click the New button on the Accounts list view
+        status: passed
+        step: 3
+        target: e34
+      - action: wait_for_selector
+        detail: Element matching 'input[name="Name"]' became visible
+        elapsed_seconds: 41.4
+        purpose: Wait for the Account Name field to appear
+        status: passed
+        step: 4
+        target: ''
+      - action: verify_text
+        detail: 'Verified: ''Account Name'' is visible on the page'
+        elapsed_seconds: 58.2
+        purpose: Account Name
+        screenshot: EXEC-9dc3bdf4__TC-002__step-05__verify_text__PASS.png
+        status: passed
+        step: 5
+        target: Account Name
+      - action: verify_text
+        detail: 'Verified: ''Phone'' is visible on the page'
+        elapsed_seconds: 63.5
+        purpose: Phone
+        screenshot: EXEC-9dc3bdf4__TC-002__step-06__verify_text__PASS.png
+        status: passed
+        step: 6
+        target: Phone
+      - action: verify_text
+        detail: 'Verified: ''Website'' is visible on the page'
+        elapsed_seconds: 67.7
+        purpose: Website
+        screenshot: EXEC-9dc3bdf4__TC-002__step-07__verify_text__PASS.png
+        status: passed
+        step: 7
+        target: Website
+      - action: verify_text
+        detail: 'Verified: ''Type'' is visible on the page'
+        elapsed_seconds: 71.3
+        purpose: Type
+        screenshot: EXEC-9dc3bdf4__TC-002__step-08__verify_text__PASS.png
+        status: passed
+        step: 8
+        target: Type
+      - action: verify_text
+        detail: 'Verified: ''Industry'' is visible on the page'
+        elapsed_seconds: 76.5
+        purpose: Industry
+        screenshot: EXEC-9dc3bdf4__TC-002__step-09__verify_text__PASS.png
+        status: passed
+        step: 9
+        target: Industry
+      - action: fill_by_selector
+        detail: 'Typed 21 characters into ''input[name="Name"]''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VI'
+        elapsed_seconds: 81.7
+        purpose: Fill Account Name field with 'Global Tech Solutions'
+        status: passed
+        step: 10
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 14 characters into ''input[name="Phone"]''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_V'
+        elapsed_seconds: 87.0
+        purpose: Fill Phone field with '(555) 123-4567'
+        status: passed
+        step: 11
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 35 characters into ''input[name="Website"]''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST'
+        elapsed_seconds: 92.7
+        purpose: Fill Website field with 'https://www.globaltechsolutions.com'
+        status: passed
+        step: 12
+        target: ''
+      - action: select_picklist
+        detail: 'Selected ''Customer - Direct'' in ''button[role="combobox"][aria-label="Type"]''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeChe'
+        elapsed_seconds: 100.8
+        purpose: Select 'Customer - Direct' from Type picklist
+        status: passed
+        step: 13
+        target: ''
+      - action: select_picklist
+        detail: 'Selected ''Technology'' in ''button[role="combobox"][aria-label="Industry"]''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck='
+        elapsed_seconds: 106.8
+        purpose: Select 'Technology' from Industry picklist
+        status: passed
+        step: 14
+        target: ''
+      - action: click_by_selector
+        detail: 'Clicked element matching ''button[name="SaveEdit"]''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LI'
+        elapsed_seconds: 113.8
+        purpose: Click the Save button to create the Account record
+        status: passed
+        step: 15
+        target: ''
+      - action: verify_text
+        detail: 'Verified: ''Global Tech Solutions'' is visible on the page'
+        elapsed_seconds: 133.1
+        purpose: Global Tech Solutions
+        screenshot: EXEC-9dc3bdf4__TC-002__step-16__verify_text__PASS.png
+        status: passed
+        step: 16
+        target: Global Tech Solutions
+      - action: verify_text
+        detail: 'Verified: ''(555) 123-4567'' is visible on the page'
+        elapsed_seconds: 137.6
+        purpose: (555) 123-4567
+        screenshot: EXEC-9dc3bdf4__TC-002__step-17__verify_text__PASS.png
+        status: passed
+        step: 17
+        target: (555) 123-4567
+      - action: verify_text
+        detail: 'Verified: ''https://www.globaltechsolutions.com'' is visible on the
+          page'
+        elapsed_seconds: 142.4
+        purpose: https://www.globaltechsolutions.com
+        screenshot: EXEC-9dc3bdf4__TC-002__step-18__verify_text__PASS.png
+        status: passed
+        step: 18
+        target: https://www.globaltechsolutions.com
+      - action: click
+        detail: 'Clicked successfully (self-healed: matched by its rendered label
+          ''Details'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/r/Account/001g700000YUG8dAAH/view
+
+          page_title: Global'
+        elapsed_seconds: 161.8
+        purpose: Click on the Details tab to view field values
+        status: passed
+        step: 19
+        target: e57
+      - action: verify_text
+        detail: 'Verified: ''Customer - Direct'' is visible on the page'
+        elapsed_seconds: 167.1
+        purpose: Customer - Direct
+        screenshot: EXEC-9dc3bdf4__TC-002__step-20__verify_text__PASS.png
+        status: passed
+        step: 20
+        target: Customer - Direct
+      - action: verify_text
+        detail: 'Verified: ''Technology'' is visible on the page'
+        elapsed_seconds: 170.9
+        purpose: Technology
+        screenshot: EXEC-9dc3bdf4__TC-002__step-21__verify_text__PASS.png
+        status: passed
+        step: 21
+        target: Technology
+      - action: verify_url
+        detail: 'Verified URL (contains ''/lightning/r/Account/''): https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/r/Account/001g700000YUG8dAAH/view'
+        elapsed_seconds: 177.3
+        purpose: Verify we are on an Account detail page
+        screenshot: EXEC-9dc3bdf4__TC-002__step-22__verify_url__PASS.png
+        status: passed
+        step: 22
+        target: ''
+      steps_executed: 22
+      steps_passed: 22
+      summary: 'Successfully created a new Account record with all standard fields
+        (Account Name: ''Global Tech Solutions'', Phone: ''(555) 123-4567'', Website:
+        ''https://www.globaltechsolutions.com'', Type: ''Customer - Direct'', Industry:
+        ''Technology''). Verified the Account creation form opened correctly, all
+        fields were available for entry, and the Account record was created with navigation
+        to the detail page showing all entered values.'
+      test_id: TC-002
+      title: Create Account record with standard fields - Happy Path
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 94.4
+      executor: mcp
+      failure_detail: null
+      linked_story: US-02
+      persona: Default
+      screenshot: null
+      skipped: false
+      status: passed
+      step_results:
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to Main Co"
+        elapsed_seconds: 8.4
+        purpose: Click the App Launcher to open the app menu
+        status: passed
+        step: 1
+        target: e17
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/list?filterName=__Recent\n\
+          page_title: Recently Viewed | Accounts | Salesforce\nelements:\n  e1: <a> "
+        elapsed_seconds: 14.2
+        purpose: Click on Accounts to navigate to the Accounts tab
+        status: passed
+        step: 2
+        target: e36
+      - action: click_by_selector
+        detail: 'Clicked successfully (self-healed: matched by its rendered label
+          ''New'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&'
+        elapsed_seconds: 23.6
+        purpose: Click the New button to open the Account creation form
+        status: passed
+        step: 3
+        target: ''
+      - action: wait_for_selector
+        detail: Element matching 'input[name="Phone"]' became visible
+        elapsed_seconds: 40.4
+        purpose: Wait for the Phone field in the New Account form to appear
+        status: passed
+        step: 4
+        target: ''
+      - action: wait_for_selector
+        detail: skipped waiting on the structural selector 'lightning-input' — the
+          action tools already auto-wait, so this wait is unnecessary. Proceed directly
+          to the next step (click/fill by visible label); do not invent wait_for_selector
+          steps.
+        elapsed_seconds: 51.1
+        purpose: Wait for Lightning input components in the New Account form
+        status: failed
+        step: 5
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 14 characters into ''input[name="Phone"]''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_V'
+        elapsed_seconds: 56.9
+        purpose: Fill the Phone field with (555) 123-4567
+        status: passed
+        step: 6
+        target: ''
+      - action: select_picklist
+        detail: 'Selected ''Customer - Direct'' in ''button[role="combobox"][aria-label="Type"]''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeChe'
+        elapsed_seconds: 63.9
+        purpose: Select 'Customer - Direct' from the Type picklist
+        status: passed
+        step: 7
+        target: ''
+      - action: click_by_selector
+        detail: 'Clicked element matching ''button[name="SaveEdit"]''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LI'
+        elapsed_seconds: 70.7
+        purpose: Click Save button to trigger validation error for missing Account
+          Name
+        status: passed
+        step: 8
+        target: ''
+      - action: verify_text
+        detail: 'Verified: ''Complete this field'' is visible on the page'
+        elapsed_seconds: 74.7
+        purpose: Complete this field
+        screenshot: EXEC-9dc3bdf4__TC-005__step-09__verify_text__PASS.png
+        status: passed
+        step: 9
+        target: Complete this field
+      - action: verify_text
+        detail: 'Verified: ''New Account'' is visible on the page'
+        elapsed_seconds: 79.3
+        purpose: New Account
+        screenshot: EXEC-9dc3bdf4__TC-005__step-10__verify_text__PASS.png
+        status: passed
+        step: 10
+        target: New Account
+      - action: verify_url
+        detail: 'Verified URL (contains ''/Account/new''): https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VIEW&uid=17840512280977874&backgroundContext=%2Flightning%2Fo%2FAccount%2Flist%3FfilterName%3D__Recent'
+        elapsed_seconds: 87.5
+        purpose: Verify we're still on the new account creation page
+        screenshot: EXEC-9dc3bdf4__TC-005__step-11__verify_url__PASS.png
+        status: passed
+        step: 11
+        target: ''
+      steps_executed: 11
+      steps_passed: 10
+      summary: Successfully verified that Account creation form validates required
+        Account Name field. When attempting to save an Account without providing a
+        name (but with Phone and Type fields filled), the system correctly displays
+        'Complete this field' validation error, prevents record creation, and keeps
+        the form open for correction.
+      test_id: TC-005
+      title: 'Create Account record with standard fields — Negative Path: Missing
+        Required Account Name'
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 63.9
+      executor: mcp
+      failure_detail: null
+      linked_story: US-02
+      persona: Default
+      screenshot: null
+      skipped: false
+      status: passed
+      step_results:
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to Main Co"
+        elapsed_seconds: 12.7
+        purpose: Click the App Launcher to open the app menu
+        status: passed
+        step: 1
+        target: e24
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/list?filterName=__Recent\n\
+          page_title: Recently Viewed | Accounts | Salesforce\nelements:\n  e1: <a> "
+        elapsed_seconds: 18.1
+        purpose: Click on Accounts to navigate to the Accounts tab
+        status: passed
+        step: 2
+        target: e36
+      - action: click_by_selector
+        detail: 'Clicked successfully (self-healed: matched by its rendered label
+          ''New'')
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://cunning-otter-59k4gi-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&'
+        elapsed_seconds: 23.3
+        purpose: Click the New button to open New Account modal
+        status: passed
+        step: 3
+        target: ''
+      - action: wait_for_selector
+        detail: Element matching 'input[name="Name"]' became visible
+        elapsed_seconds: 33.5
+        purpose: Wait for Account Name field to appear
+        status: passed
+        step: 4
+        target: ''
+      - action: assert_visible
+        detail: 'Verified: at least one visible element matches ''input[name="Name"]''
+          (count=1)'
+        elapsed_seconds: 41.1
+        purpose: ''
+        screenshot: EXEC-9dc3bdf4__TC-006__step-05__assert_visible__PASS.png
+        status: passed
+        step: 5
+        target: ''
+      - action: assert_visible
+        detail: 'Verified: at least one visible element matches ''input[name="Phone"]''
+          (count=1)'
+        elapsed_seconds: 46.6
+        purpose: ''
+        screenshot: EXEC-9dc3bdf4__TC-006__step-06__assert_visible__PASS.png
+        status: passed
+        step: 6
+        target: ''
+      - action: assert_visible
+        detail: 'Verified: at least one visible element matches ''input[name="Website"]''
+          (count=1)'
+        elapsed_seconds: 49.5
+        purpose: ''
+        screenshot: EXEC-9dc3bdf4__TC-006__step-07__assert_visible__PASS.png
+        status: passed
+        step: 7
+        target: ''
+      - action: assert_visible
+        detail: 'Verified: at least one visible element matches ''button[role="combobox"][aria-label="Type"]''
+          (count=1)'
+        elapsed_seconds: 52.7
+        purpose: ''
+        screenshot: EXEC-9dc3bdf4__TC-006__step-08__assert_visible__PASS.png
+        status: passed
+        step: 8
+        target: ''
+      - action: assert_visible
+        detail: 'Verified: at least one visible element matches ''button[role="combobox"][aria-label="Industry"]''
+          (count=1)'
+        elapsed_seconds: 56.9
+        purpose: ''
+        screenshot: EXEC-9dc3bdf4__TC-006__step-09__assert_visible__PASS.png
+        status: passed
+        step: 9
+        target: ''
+      steps_executed: 9
+      steps_passed: 9
+      summary: Successfully verified availability of all standard Account fields (Account
+        Name, Phone, Website, Type, and Industry) on the New Account creation form.
+        All assertion steps passed - the form contains all required fields for capturing
+        customer organization details.
+      test_id: TC-006
+      title: Create Account record with standard fields — Field Availability Verification
   test_scripts:
     generated_at: '2026-07-14T17:42:49.079829+00:00'
     generated_from: Standalone run — 1 user stories in 1 batch(es)
@@ -2742,4 +3239,4 @@ pipeline_artifacts:
     test_suite: Generated test suite — 1 user stories
     total_tests: 6
 schema_version: 1
-updated_at: '2026-07-14T17:42:49.087976+00:00'
+updated_at: '2026-07-14T17:49:32.561770+00:00'
