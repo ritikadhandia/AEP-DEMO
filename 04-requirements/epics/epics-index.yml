@@ -1,0 +1,5 @@
+schema_version: 1
+# Epic catalogue. Each epic groups multiple user stories. Maintained
+# by the auto_assign_epics flow in app/doc_classifier.py.
+epics: []
+story_epic_map: {}
